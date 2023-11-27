@@ -1,0 +1,82 @@
+{
+  "name": "Index",
+  "language": "en",
+  "data": [
+    {
+      "name": "basic",
+      "text": "Basic",
+      "type": "category",
+      "data": [
+        {
+          "name": "entry_point",
+          "text": "Entry Point",
+          "type": "item"
+        },
+        {
+          "name": "variables",
+          "text": "Variables",
+          "type": "category",
+          "data": [
+            {
+              "name": "variable_declaration",
+              "text": "Variable Declaration",
+              "type": "item"
+            },
+            {
+                "name": "read_only_variables",
+                "text": "Read Only Variables",
+                "type": "item"
+            },
+            {
+              "name": "variable_assignment",
+              "text": "Variable Assignment",
+              "type": "item"
+            },
+            {
+              "name": "variable_scope",
+              "text": "Variable Scope",
+              "type": "item"
+            }
+          ]
+        },
+        {
+          "name": "operators",
+          "text": "Operators",
+          "type": "category"
+        },
+        {
+          "name": "comments",
+          "text": "Comments",
+          "type": "category"
+        },
+        {
+          "name": "functions",
+          "text": "Functions",
+          "type": "category",
+          "data": [
+            {
+              "name": "function_declaration",
+              "text": "Function Declaration",
+              "type": "item"
+            },
+            {
+              "name": "function_call",
+              "text": "Function Call",
+              "type": "item"
+            },
+            {
+              "name": "function_parameters",
+              "text": "Function Parameters",
+              "type": "item"
+            },
+            {
+              "name": "function_return",
+              "text": "Function Return",
+              "type": "item"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
