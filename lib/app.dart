@@ -3,6 +3,7 @@ import 'package:coding_languages/theme/dark_theme.dart';
 import 'package:coding_languages/theme/light_theme.dart';
 import 'package:coding_languages/widgets/custom_icon_button.dart';
 import 'package:coding_languages/widgets/demo/data_table_view.dart';
+import 'package:coding_languages/widgets/drawer_view.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatefulWidget {
@@ -24,6 +25,7 @@ class _AppState extends State<App> {
   }
 }
 
+/* Extract a single widget because we need the material context to showDialog. */
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -50,37 +52,9 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      drawer: Drawer(
-          child: ListView(
-        padding: EdgeInsets.zero,
-        children: const <Widget>[
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text(
-              'Index',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-              ),
-            ),
-          ),
-          /* We would better to have a collapsing list*/
-          ListTile(
-            leading: Icon(Icons.message),
-            title: Text('Basic'),
-          ),
-          ListTile(
-            leading: Icon(Icons.account_circle),
-            title: Text('Types'),
-          ),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Control flow'),
-          ),
-        ],
-      )),
+      drawer: const Drawer(
+        child: IndexView(),
+      ),
       body: const DataTableViewDemo(),
     );
   }

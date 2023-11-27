@@ -20,7 +20,8 @@ dependencies:
   data_table_2: ^2.5.9 # Show the language items in the table.
   flutter_highlight: ^0.7.0
   cupertino_icons: ^1.0.2
-
+  logging: ^1.2.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
