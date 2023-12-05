@@ -3,8 +3,27 @@ import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
 
 /* https://pub.dev/packages/data_table_2 */
-class DataTableViewDemo extends StatelessWidget {
+class DataTableViewDemo extends StatefulWidget {
   const DataTableViewDemo({super.key});
+
+  @override
+  State<DataTableViewDemo> createState() => _DataTableViewDemoState();
+}
+
+class _DataTableViewDemoState extends State<DataTableViewDemo> {
+  ScrollController? _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    _controller?.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

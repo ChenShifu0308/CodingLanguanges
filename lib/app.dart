@@ -48,11 +48,30 @@ class HomePage extends StatelessWidget {
                     return const SettingDialog();
                   });
             },
-            icon: Icons.settings,
+            icon: Icons.view_column,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 10.0,
+              right: 10,
+            ),
+            child: CustomIconButton(
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return const SettingDialog();
+                    });
+              },
+              icon: Icons.settings,
+            ),
           ),
         ],
       ),
       drawer: const Drawer(
+        width: 300, // 计算显示宽度，然后比显示宽度小一些。
+        elevation: 50,
+        backgroundColor: Colors.white,
         child: IndexView(),
       ),
       body: const DataTableViewDemo(),

@@ -31,7 +31,7 @@ class CustomIconButton extends StatelessWidget {
       child: IconButton(
         onPressed: onPressed,
         splashColor: Colors.transparent,
-        splashRadius: (minWidth ?? 45) - 25,
+        splashRadius: (minWidth ?? 45) - 15,
         iconSize: iconSize ?? 22,
         padding: EdgeInsets.zero,
         constraints: BoxConstraints(

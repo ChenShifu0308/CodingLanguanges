@@ -11,7 +11,7 @@ class IndexView extends StatelessWidget {
     return TreeView.simpleTyped<Explorable, TreeNode<Explorable>>(
       tree: tree,
       showRootNode: true,
-      expansionBehavior: ExpansionBehavior.collapseOthersAndSnapToTop,
+      expansionBehavior: ExpansionBehavior.none,
       expansionIndicatorBuilder: (context, node) {
         if (node.isRoot) {
           return PlusMinusIndicator(
@@ -31,29 +31,29 @@ class IndexView extends StatelessWidget {
           {Logger('IndexView').info('onItemTap: ${value.data?.name}')},
       onTreeReady: (controller) {
         /* 测试自动展开 */
-        controller.expandNode(tree);
-        var media = tree.childrenAsList[1] as TreeNode<Explorable>;
-        Future.delayed(Duration(milliseconds: 20), () {
-          controller.expandNode(media);
-          var picture = media.childrenAsList[0] as TreeNode<Explorable>;
-          Future.delayed(Duration(milliseconds: 20), () {
-            controller.expandNode(picture);
-            Future.delayed(Duration(milliseconds: 20), () {
-              controller.scrollToItem(
-                  picture.childrenAsList[12] as TreeNode<Explorable>);
-            });
-          });
-        });
+        // controller.expandNode(tree);
+        // var media = tree.childrenAsList[1] as TreeNode<Explorable>;
+        // Future.delayed(Duration(milliseconds: 20), () {
+        //   controller.expandNode(media);
+        //   var picture = media.childrenAsList[0] as TreeNode<Explorable>;
+        //   Future.delayed(Duration(milliseconds: 20), () {
+        //     controller.expandNode(picture);
+        //     Future.delayed(Duration(milliseconds: 20), () {
+        //       controller.scrollToItem(
+        //           picture.childrenAsList[12] as TreeNode<Explorable>);
+        //     });
+        //   });
+        // });
       },
       indentation: const Indentation(),
       builder: (context, node) => Padding(
         padding: const EdgeInsets.only(left: 16.0),
         child: ListTile(
-          title: Text(node.data?.name ?? "N/A"),
-          subtitle: Text(node.data?.createdAt.toString() ?? "N/A"),
-          leading: const Padding(
-            padding: EdgeInsets.only(top: 8.0),
-            child: Icon(Icons.folder),
+          title: Text(
+            node.data?.name ?? "N/A",
+            style: const TextStyle(
+              backgroundColor: Colors.transparent,
+            ),
           ),
         ),
       ),
@@ -87,21 +87,23 @@ typedef FileNode = TreeNode<File>;
 
 typedef FolderNode = TreeNode<Folder>;
 
-final tree = TreeNode<Explorable>.root(data: Folder("/root"))
+final tree = TreeNode<Explorable>.root(data: Folder("Index"))
   ..addAll([
-    FolderNode(data: Folder("Documents"))
+    FolderNode(data: Folder("Basic"))
       ..addAll([
         FileNode(
-          data: File("report.doc", mimeType: "application/msword"),
+          data: File("Variable Declaration", mimeType: "application/msword"),
         ),
         FileNode(
-          data: File("budget.xls", mimeType: "application/vnd.ms-excel"),
+          data:
+              File("Read Only Variables", mimeType: "application/vnd.ms-excel"),
         ),
         FileNode(
-          data: File("training.ppt", mimeType: "application/vnd.ms-powerpoint"),
+          data: File("Variable Assignment",
+              mimeType: "application/vnd.ms-powerpoint"),
         )
       ]),
-    FolderNode(data: Folder("Media"))
+    FolderNode(data: Folder("Operators"))
       ..addAll([
         FolderNode(data: Folder("Pictures"))
           ..addAll([
@@ -139,7 +141,7 @@ final tree = TreeNode<Explorable>.root(data: Folder("/root"))
               ])
           ])
       ]),
-    FolderNode(data: Folder("System"))
+    FolderNode(data: Folder("Comments"))
       ..addAll([
         FolderNode(data: Folder("temp")),
         FolderNode(data: Folder("apps"))
