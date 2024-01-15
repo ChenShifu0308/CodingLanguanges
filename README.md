@@ -17,3 +17,8 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Dependencies
 Flutter: 3.16.0
+
+
+## Notes
+- How to split the screen responsively in Flutter
+  - https://github.com/bizz84/split_view_example_flutter
