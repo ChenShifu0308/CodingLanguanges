@@ -1,7 +1,6 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:animated_tree_view/animated_tree_view.dart';
-import 'package:logging/logging.dart';
+import 'package:coding_languages/main.dart';
+import 'package:flutter/material.dart';
 
 class IndexView extends StatelessWidget {
   const IndexView({super.key});
@@ -27,8 +26,7 @@ class IndexView extends StatelessWidget {
           color: Colors.grey[700],
         );
       },
-      onItemTap: (value) =>
-          {Logger('IndexView').info('onItemTap: ${value.data?.name}')},
+      onItemTap: (value) => {logger.i('onItemTap: ${value.data?.name}')},
       onTreeReady: (controller) {
         /* 测试自动展开 */
         // controller.expandNode(tree);
