@@ -1,11 +1,13 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import '../main.dart';
 
 class SettingDialog extends StatelessWidget {
   const SettingDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
+    logger.i('SettingDialog build');
     return Container(
       // 设置dialog的内容
       child: Column(

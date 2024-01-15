@@ -7,7 +7,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.1.2 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -20,7 +20,7 @@ dependencies:
   data_table_2: ^2.5.9 # Show the language items in the table.
   flutter_highlight: ^0.7.0
   cupertino_icons: ^1.0.2
-  logging: ^1.2.0
+  logger: ^2.0.2+1
   
 dev_dependencies:
   flutter_test:

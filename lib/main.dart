@@ -3,21 +3,15 @@ import 'dart:io';
 import 'package:coding_languages/app.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:logging/logging.dart';
+import 'package:logger/logger.dart';
 import 'package:window_size/window_size.dart';
+
+final logger = Logger( printer: PrettyPrinter(),);
 
 void main() {
   // setupWindow();
   WidgetsFlutterBinding.ensureInitialized();
-  initLogger();
   runApp(const App());
-}
-
-void initLogger() {
-  Logger.root.level = Level.ALL; // defaults to Level.INFO
-  Logger.root.onRecord.listen((record) {
-    print('${record.level.name}: ${record.time}: ${record.message}');
-  });
 }
 
 const double windowWidth = 480;
