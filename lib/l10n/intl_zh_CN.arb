@@ -1,4 +1,6 @@
 {
-  "app_name": "编程语言对照大全"
-
+  "app_name": "编程语言对照大全",
+  "first_coding_language": "编程语言1",
+  "second_coding_language": "编程语言2",
+  "third_coding_language": "编程语言3"
 }

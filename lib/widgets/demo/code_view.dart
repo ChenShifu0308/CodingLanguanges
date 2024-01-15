@@ -36,7 +36,7 @@ void main(List<String> arguments) {
             padding: const EdgeInsets.all(4),
             textStyle: const TextStyle(
               fontFamily: 'Roboto Mono',
-              fontSize: 8,
+              fontSize: 12,
             ),
           ),
         ),

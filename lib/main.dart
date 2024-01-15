@@ -6,7 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:window_size/window_size.dart';
 
-final logger = Logger( printer: PrettyPrinter(),);
+final logger = Logger(
+  printer: PrettyPrinter(),
+);
+
+final Map<String, String> languages = {
+  'kotlin': 'assets/json/kotlin.json',
+  'dart': 'assets/json/dart.json',
+};
 
 void main() {
   // setupWindow();

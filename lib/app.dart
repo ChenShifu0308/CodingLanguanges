@@ -1,3 +1,4 @@
+import 'package:coding_languages/features/setting/language_select_dialog.dart';
 import 'package:coding_languages/features/setting/setting_dialog.dart';
 import 'package:coding_languages/theme/dark_theme.dart';
 import 'package:coding_languages/theme/light_theme.dart';
@@ -7,6 +8,7 @@ import 'package:coding_languages/widgets/drawer_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'features/main/homepage.dart';
 import 'generated/l10n.dart';
 
 class App extends StatefulWidget {
@@ -40,65 +42,5 @@ class _AppState extends State<App> {
         },
         supportedLocales: S.delegate.supportedLocales,
         home: const HomePage());
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        bottom: PreferredSize(
-          child: Container(
-            color: Theme.of(context).dividerColor,
-            height: 1.0,
-          ),
-          preferredSize: const Size.fromHeight(1.0),
-        ),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        elevation: 0,
-        title: Text(
-          S.current.app_name,
-        ),
-        centerTitle: true,
-        actions: [
-          CustomIconButton(
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (context) {
-                    return const SettingDialog();
-                  });
-            },
-            icon: Icons.view_column,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 10.0,
-              right: 10,
-            ),
-            child: CustomIconButton(
-              onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (context) {
-                      return const SettingDialog();
-                    });
-              },
-              icon: Icons.settings,
-            ),
-          ),
-        ],
-      ),
-      drawer: const Drawer(
-        width: 300, // 计算显示宽度，然后比显示宽度小一些。
-        elevation: 50,
-        backgroundColor: Colors.white,
-        child: IndexView(),
-      ),
-      body: const DataTableViewDemo(),
-    );
   }
 }
