@@ -1,4 +1,4 @@
-import 'package:coding_languages/setting/setting_dialog.dart';
+import 'package:coding_languages/features/setting/setting_dialog.dart';
 import 'package:coding_languages/theme/dark_theme.dart';
 import 'package:coding_languages/theme/light_theme.dart';
 import 'package:coding_languages/widgets/custom_icon_button.dart';
@@ -43,7 +43,6 @@ class _AppState extends State<App> {
   }
 }
 
-/* Extract a single widget because we need the material context to showDialog. */
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -51,10 +50,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        bottom: PreferredSize(
+          child: Container(
+            color: Theme.of(context).dividerColor,
+            height: 1.0,
+          ),
+          preferredSize: const Size.fromHeight(1.0),
+        ),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
-        title: const Text(
-          'Coding Languages',
+        title: Text(
+          S.current.app_name,
         ),
         centerTitle: true,
         actions: [

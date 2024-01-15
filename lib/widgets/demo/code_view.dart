@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/flutter_highlight.dart';
-import 'package:flutter_highlight/themes/github.dart';
+import 'package:flutter_highlighter/flutter_highlighter.dart';
+import 'package:flutter_highlighter/themes/github.dart';
+
 
 /* https://pub.dev/packages/flutter_highlight */
 class CodeView extends StatelessWidget {
@@ -21,8 +22,8 @@ void main(List<String> arguments) {
       child: DecoratedBox(
         decoration: BoxDecoration(
           border: Border.all(
-            color: Colors.black.withAlpha(200),
-            width: 1,
+            color: Colors.white.withAlpha(200),
+            width: 4,
           ),
           borderRadius: BorderRadius.circular(4),
         ),

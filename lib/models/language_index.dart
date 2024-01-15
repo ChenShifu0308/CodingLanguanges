@@ -6,10 +6,11 @@ part 'language_index.g.dart';
 /// Json Model Generation: run `dart run build_runner build --delete-conflicting-outputs`
 @JsonSerializable()
 class LanguageIndex {
-  final String language; // 'zh-CN' or 'en-US'
+  final String name;
+  final String language; // 'zh' or 'en';
   final List<LanguageIndexNode> data;
 
-  LanguageIndex({required this.language, required this.data});
+  LanguageIndex({required this.name, required this.language, required this.data});
 
   factory LanguageIndex.fromJson(Map<String, dynamic> json) =>
       _$LanguageIndexFromJson(json);

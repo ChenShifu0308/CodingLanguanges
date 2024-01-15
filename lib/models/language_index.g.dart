@@ -8,6 +8,7 @@ part of 'language_index.dart';
 
 LanguageIndex _$LanguageIndexFromJson(Map<String, dynamic> json) =>
     LanguageIndex(
+      name: json['name'] as String,
       language: json['language'] as String,
       data: (json['data'] as List<dynamic>)
           .map((e) => LanguageIndexNode.fromJson(e as Map<String, dynamic>))
@@ -16,6 +17,7 @@ LanguageIndex _$LanguageIndexFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$LanguageIndexToJson(LanguageIndex instance) =>
     <String, dynamic>{
+      'name': instance.name,
       'language': instance.language,
       'data': instance.data,
     };
