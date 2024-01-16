@@ -2,8 +2,8 @@ import 'package:animated_tree_view/animated_tree_view.dart';
 import 'package:coding_languages/main.dart';
 import 'package:flutter/material.dart';
 
-class IndexView extends StatelessWidget {
-  const IndexView({super.key});
+class IndexTestView extends StatelessWidget {
+  const IndexTestView({super.key});
 
   @override
   Widget build(BuildContext context) {
