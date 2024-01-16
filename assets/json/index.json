@@ -4,7 +4,7 @@
   "data": [
     {
       "name": "basic",
-      "text": "Basic",
+      "text": "BASIC",
       "type": "category",
       "data": [
         {
@@ -23,9 +23,9 @@
               "type": "item"
             },
             {
-                "name": "read_only_variables",
-                "text": "Read Only Variables",
-                "type": "item"
+              "name": "read_only_variables",
+              "text": "Read Only Variables",
+              "type": "item"
             },
             {
               "name": "variable_assignment",
@@ -75,6 +75,33 @@
               "type": "item"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "functions",
+      "text": "FUNCTIONS",
+      "type": "category",
+      "data": [
+        {
+          "name": "function_declaration",
+          "text": "Function Declaration",
+          "type": "item"
+        },
+        {
+          "name": "function_call",
+          "text": "Function Call",
+          "type": "item"
+        },
+        {
+          "name": "function_parameters",
+          "text": "Function Parameters",
+          "type": "item"
+        },
+        {
+          "name": "function_return",
+          "text": "Function Return",
+          "type": "item"
         }
       ]
     }
