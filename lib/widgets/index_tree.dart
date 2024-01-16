@@ -1,16 +1,21 @@
 import 'package:animated_tree_view/animated_tree_view.dart';
 import 'package:coding_languages/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/language_index.dart';
 
-class IndexTree extends StatelessWidget {
+/// Provider for the selected index
+final indexSelectedProvider = StateProvider<String?>((ref) => null);
+
+class IndexTree extends ConsumerWidget {
   final LanguageIndex index;
 
   const IndexTree({super.key, required this.index});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    var isInDrawer = context.findAncestorWidgetOfExactType<Drawer>() != null;
     var root = TreeNode<LanguageIndexNode>.root();
     return TreeView.simpleTyped<LanguageIndexNode, TreeNode<LanguageIndexNode>>(
       tree: _constructTree(index.data, root),
@@ -31,9 +36,18 @@ class IndexTree extends StatelessWidget {
           color: Colors.grey[700],
         );
       },
-      onItemTap: (value) => {logger.i('onItemTap: ${value.data?.name}')},
+      onItemTap: (value) => {
+        logger.i('onItemTap: ${value.data?.name}'),
+        ref.read(indexSelectedProvider.notifier).state = value.data?.name,
+        if (value.data?.type == LanguageIndexType.item && isInDrawer)
+          {
+            Navigator.of(context).pop(),
+          }
+      },
       onTreeReady: (controller) {},
-      indentation: const Indentation(),
+      indentation: const Indentation(
+        thickness: 0.4,
+      ),
       builder: (context, node) => Padding(
         padding: const EdgeInsets.only(left: 16.0),
         child: ListTile(

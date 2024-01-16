@@ -25,7 +25,7 @@ class ContentScaffold extends StatelessWidget {
       appBar: AppBar(
         leading: hasDrawer
             ? IconButton(
-                icon: Icon(Icons.menu),
+                icon: const Icon(Icons.menu),
                 // 4. open the drawer if we have one
                 onPressed:
                     hasDrawer ? () => ancestorScaffold!.openDrawer() : null,
@@ -49,19 +49,8 @@ class ContentScaffold extends StatelessWidget {
             onPressed: () {
               showDialog(
                   context: context,
-                  barrierDismissible: true,
-                  barrierLabel: '',
                   builder: (context) {
-                    return Container(
-                      width: 300,
-                      height: 300,
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: const LanguageSelectDialog(),
-                    );
+                    return const LanguageSelectDialog();
                   });
             },
             icon: Icons.view_column,

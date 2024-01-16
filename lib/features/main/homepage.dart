@@ -13,12 +13,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: AssetUtil.loadJsonFromAssets('json/index.json')
+      future: AssetUtil.loadJsonFromAssets('json/index_en.json')
           .then((value) => LanguageIndex.fromJson(value)),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           var index = snapshot.data as LanguageIndex;
           return SplitView(
+            breakpoint: 800,
             menu: IndexView(
               indexWidget: IndexTree(index: index),
               title: index.name,

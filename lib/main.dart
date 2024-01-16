@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:coding_languages/app.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logger/logger.dart';
 import 'package:window_size/window_size.dart';
 
@@ -18,7 +19,9 @@ final Map<String, String> languages = {
 void main() {
   // setupWindow();
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const App());
+  runApp(
+    const ProviderScope(child: App()),
+  );
 }
 
 const double windowWidth = 480;

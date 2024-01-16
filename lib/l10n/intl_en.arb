@@ -2,5 +2,7 @@
   "app_name": "Coding Languages",
   "first_coding_language": "1st Coding Language",
   "second_coding_language": "2nd Coding Language",
-  "third_coding_language": "3rd Coding Language"
+  "third_coding_language": "3rd Coding Language",
+  "fourth_coding_language": "4th Coding Language",
+  "languages_selection_dialog_title": "Select Coding Languages"
 }

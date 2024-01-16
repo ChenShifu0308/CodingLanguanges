@@ -8,32 +8,39 @@ class SettingModel {
   final bool isDarkMode;
   final int codeFontSize;
   final String language; // 'en' 'zh'
-  final List<String> codingLanguages;
+  final List<String> selectedCodingLanguages;
+
+  final bool isVip;
 
   const SettingModel({
     required this.isDarkMode,
     required this.codeFontSize,
     required this.language,
-    required this.codingLanguages,
+    required this.selectedCodingLanguages,
+    required this.isVip,
   });
 
   SettingModel.fromSharedPref(SharedPreferences? pref)
       : isDarkMode = pref?.getBool('isDarkMode') ?? false,
         codeFontSize = pref?.getInt('codeFontSize') ?? 12,
         language = pref?.getString('language') ?? 'en',
-        codingLanguages = pref?.getStringList('codingLanguages') ?? ['dart'];
+        selectedCodingLanguages =
+            pref?.getStringList('codingLanguages') ?? ['dart'],
+        isVip = pref?.getBool('isVip') ?? false;
 
   SettingModel copyWith({
     bool? isDarkMode,
     int? codeFontSize,
     String? language,
     List<String>? codingLanguages,
+    bool? isVip,
   }) {
     return SettingModel(
       isDarkMode: isDarkMode ?? this.isDarkMode,
       codeFontSize: codeFontSize ?? this.codeFontSize,
       language: language ?? this.language,
-      codingLanguages: codingLanguages ?? this.codingLanguages,
+      selectedCodingLanguages: codingLanguages ?? this.selectedCodingLanguages,
+      isVip: isVip ?? this.isVip,
     );
   }
 
@@ -44,7 +51,9 @@ class SettingModel {
       isDarkMode: pref?.getBool('isDarkMode') ?? false,
       codeFontSize: pref?.getInt('codeFontSize') ?? 12,
       language: pref?.getString('language') ?? 'en',
-      codingLanguages: pref?.getStringList('codingLanguages') ?? ['dart'],
+      selectedCodingLanguages:
+          pref?.getStringList('codingLanguages') ?? ['dart'],
+      isVip: pref?.getBool('isVip') ?? false,
     );
   }
 }
@@ -81,5 +90,10 @@ class SettingModelNotifier extends StateNotifier<SettingModel> {
   void setCodingLanguages(List<String> codingLanguages) {
     pref?.setStringList('codingLanguages', codingLanguages);
     state = state.copyWith(codingLanguages: codingLanguages);
+  }
+
+  void setIsVip(bool isVip) {
+    pref?.setBool('isVip', isVip);
+    state = state.copyWith(isVip: isVip);
   }
 }

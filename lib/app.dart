@@ -1,5 +1,6 @@
 import 'package:coding_languages/features/setting/language_select_dialog.dart';
 import 'package:coding_languages/features/setting/setting_dialog.dart';
+import 'package:coding_languages/theme/color_schemes.g.dart';
 import 'package:coding_languages/theme/dark_theme.dart';
 import 'package:coding_languages/theme/light_theme.dart';
 import 'package:coding_languages/widgets/custom_icon_button.dart';
@@ -23,8 +24,10 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: lightTheme(),
-        darkTheme: darkTheme(),
+        theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
+        darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
+        // theme: lightTheme(),
+        // darkTheme: darkTheme(),
         title: 'Coding Languages',
         localizationsDelegates: const [
           S.delegate,
