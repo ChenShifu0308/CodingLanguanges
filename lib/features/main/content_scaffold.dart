@@ -62,22 +62,10 @@ class ContentScaffold extends StatelessWidget {
             ),
             child: CustomIconButton(
               onPressed: () {
-                showGeneralDialog(
+                showDialog(
                     context: context,
-                    barrierDismissible: true,
-                    barrierLabel: '',
-                    pageBuilder: (context, animation, secondaryAnimation) {
-                      return Container(
-                        width: 300,
-                        height: 400,
-                        margin: const EdgeInsets.all(10),
-                        padding: const EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: const SettingDialog(),
-                      );
+                    builder: (context) {
+                      return const SettingDialog();
                     });
               },
               icon: Icons.settings,

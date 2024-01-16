@@ -96,4 +96,14 @@ class SettingModelNotifier extends StateNotifier<SettingModel> {
     pref?.setBool('isVip', isVip);
     state = state.copyWith(isVip: isVip);
   }
+
+  void toggleVip() {
+    pref?.setBool('isVip', !state.isVip);
+    state = state.copyWith(isVip: !state.isVip);
+  }
+
+  void toggleDarkMode() {
+    pref?.setBool('isDarkMode', !state.isDarkMode);
+    state = state.copyWith(isDarkMode: !state.isDarkMode);
+  }
 }

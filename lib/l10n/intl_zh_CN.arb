@@ -4,5 +4,15 @@
   "second_coding_language": "编程语言2",
   "third_coding_language": "编程语言3",
   "fourth_coding_language": "编程语言4",
-  "languages_selection_dialog_title": "选择编程语言"
+  "languages_selection_dialog_title": "选择编程语言",
+  "setting_dialog_title": "设置",
+  "cancel": "取消",
+  "save": "保存",
+  "confirm": "确定",
+  "setting_dialog_vip_title": "VIP",
+  "setting_dialog_vip_subtitle": "开启VIP功能",
+  "setting_dialog_dark_mode_title": "夜间模式",
+  "setting_dialog_dark_mode_subtitle": "开启夜间模式",
+  "setting_dialog_language_title": "语言",
+  "setting_dialog_code_font_size_title": "代码字体大小"
 }

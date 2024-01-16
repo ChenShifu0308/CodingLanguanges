@@ -31,18 +31,17 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
           ref.watch(settingModelProvider).selectedCodingLanguages;
       setState(() {
         selectedCodingLanguage1 =
-        selectedLanguages.length >= 1 ? selectedLanguages[0] : null;
+            selectedLanguages.length >= 1 ? selectedLanguages[0] : null;
         selectedCodingLanguage2 =
-        selectedLanguages.length >= 2 ? selectedLanguages[1] : null;
+            selectedLanguages.length >= 2 ? selectedLanguages[1] : null;
         selectedCodingLanguage3 =
-        selectedLanguages.length >= 3 ? selectedLanguages[2] : null;
+            selectedLanguages.length >= 3 ? selectedLanguages[2] : null;
         selectedCodingLanguage4 =
-        selectedLanguages.length >= 4 ? selectedLanguages[3] : null;
+            selectedLanguages.length >= 4 ? selectedLanguages[3] : null;
 
         selectedCodingLanguage1 ??= languages.keys.first;
       });
     });
-
 
     super.initState();
   }
@@ -84,7 +83,7 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
                 width: 5,
               ),
               DropdownMenu<String>(
-                  initialSelection: selectedCodingLanguage2,
+                initialSelection: selectedCodingLanguage2,
                 requestFocusOnTap: true,
                 label: Text(S.current.second_coding_language),
                 onSelected: (String? codingLanguage) {
@@ -109,7 +108,7 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
             mainAxisSize: MainAxisSize.min,
             children: [
               DropdownMenu<String>(
-               initialSelection: selectedCodingLanguage3,
+                initialSelection: selectedCodingLanguage3,
                 requestFocusOnTap: true,
                 enabled: isVip,
                 label: Text(S.current.third_coding_language),
@@ -130,7 +129,7 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
                 width: 5,
               ),
               DropdownMenu<String>(
-                 initialSelection: selectedCodingLanguage4,
+                initialSelection: selectedCodingLanguage4,
                 requestFocusOnTap: true,
                 enabled: isVip,
                 label: Text(S.current.fourth_coding_language),
@@ -153,15 +152,14 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
       ),
       actions: <Widget>[
         TextButton(
-          child: const Text('Cancel'),
+          child: Text(S.current.cancel),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
         TextButton(
-          child: const Text('Confirm'),
+          child: Text(S.current.confirm),
           onPressed: () {
-            // TODO, 判断选择的语言如果有相同的，则提示进行修改
             if (_haveSameCodingLanguage(
                 selectedCodingLanguage1,
                 selectedCodingLanguage2,

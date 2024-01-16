@@ -4,5 +4,15 @@
   "second_coding_language": "2nd Coding Language",
   "third_coding_language": "3rd Coding Language",
   "fourth_coding_language": "4th Coding Language",
-  "languages_selection_dialog_title": "Select Coding Languages"
+  "languages_selection_dialog_title": "Select Coding Languages",
+  "setting_dialog_title": "Settings",
+  "cancel": "Cancel",
+  "save": "Save",
+  "confirm": "Confirm",
+  "setting_dialog_vip_title": "VIP",
+  "setting_dialog_vip_subtitle": "Become a VIP to unlock all features",
+  "setting_dialog_dark_mode_title": "Dark Mode",
+  "setting_dialog_dark_mode_subtitle": "Enable dark mode",
+  "setting_dialog_language_title": "Language",
+  "setting_dialog_code_font_size_title": "Code Font Size"
 }
