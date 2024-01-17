@@ -11,11 +11,6 @@ final logger = Logger(
   printer: PrettyPrinter(),
 );
 
-final Map<String, String> languages = {
-  'kotlin': 'assets/json/kotlin.json',
-  'dart': 'assets/json/dart.json',
-};
-
 void main() {
   // setupWindow();
   WidgetsFlutterBinding.ensureInitialized();

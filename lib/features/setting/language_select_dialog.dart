@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../generated/l10n.dart';
 import '../../main.dart';
+import '../../providers/languages_provider.dart';
 
 /// Use 2 dropdown buttons to select 2 coding languages to compare
 class LanguageSelectDialog extends ConsumerStatefulWidget {
@@ -39,7 +40,7 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
         selectedCodingLanguage4 =
             selectedLanguages.length >= 4 ? selectedLanguages[3] : null;
 
-        selectedCodingLanguage1 ??= languages.keys.first;
+        selectedCodingLanguage1 ??= allLanguages.first;
       });
     });
 
@@ -71,7 +72,7 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
                     selectedCodingLanguage1 = codingLanguage;
                   });
                 },
-                dropdownMenuEntries: languages.keys
+                dropdownMenuEntries: allLanguages
                     .map<DropdownMenuEntry<String>>((String codingLanguage) {
                   return DropdownMenuEntry<String>(
                     value: codingLanguage,
@@ -91,7 +92,7 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
                     selectedCodingLanguage2 = codingLanguage;
                   });
                 },
-                dropdownMenuEntries: languages.keys
+                dropdownMenuEntries: allLanguages
                     .map<DropdownMenuEntry<String>>((String codingLanguage) {
                   return DropdownMenuEntry<String>(
                     value: codingLanguage,
@@ -117,7 +118,7 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
                     selectedCodingLanguage3 = codingLanguage;
                   });
                 },
-                dropdownMenuEntries: languages.keys
+                dropdownMenuEntries: allLanguages
                     .map<DropdownMenuEntry<String>>((String codingLanguage) {
                   return DropdownMenuEntry<String>(
                     value: codingLanguage,
@@ -138,7 +139,7 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
                     selectedCodingLanguage4 = codingLanguage;
                   });
                 },
-                dropdownMenuEntries: languages.keys
+                dropdownMenuEntries: allLanguages
                     .map<DropdownMenuEntry<String>>((String codingLanguage) {
                   return DropdownMenuEntry<String>(
                     value: codingLanguage,
