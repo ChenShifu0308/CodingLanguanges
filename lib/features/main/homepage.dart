@@ -2,6 +2,8 @@ import 'package:coding_languages/utils/asset_util.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/language_index.dart';
+import '../../widgets/demo/data_table_view.dart';
+import '../../widgets/demo/twod_scroll_test_view.dart';
 import '../../widgets/index_tree.dart';
 import '../../widgets/split_view.dart';
 import 'content_scaffold.dart';
@@ -26,7 +28,7 @@ class HomePage extends StatelessWidget {
             ),
             content: const ContentScaffold(
               body: Center(
-                child: Text('Content'),
+                child: TwoDScrollTestView(),
               ), //DataTableViewDemo(),
             ),
           );

@@ -17,11 +17,11 @@ dependencies:
       url: https://github.com/google/flutter-desktop-embedding.git
       path: plugins/window_size
   animated_tree_view: ^2.1.0 # TODO: delete, use the 'flutter_simple_treeview'
-  data_table_2: ^2.5.9 # TODO:  Delete, use two_dimensional_scrollables
+  data_table_2: ^2.5.10 # TODO:  Delete, use two_dimensional_scrollables
 #  flutter_highlight: ^0.7.0
   cupertino_icons: ^1.0.2
   logger: ^2.0.2+1
-  flutter_simple_treeview: ^3.0.2
+#  flutter_simple_treeview: ^3.0.2
   two_dimensional_scrollables: ^0.0.5+1
   flutter_highlighter: ^0.1.1 # Used for syntax highlighting
   # https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization

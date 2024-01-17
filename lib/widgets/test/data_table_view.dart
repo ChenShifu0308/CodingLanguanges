@@ -1,6 +1,7 @@
-import 'package:coding_languages/widgets/demo/code_view.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
+
+import 'code_view.dart';
 
 /* https://pub.dev/packages/data_table_2 */
 class DataTableViewDemo extends StatefulWidget {
@@ -36,6 +37,7 @@ class _DataTableViewDemoState extends State<DataTableViewDemo> {
           columnSpacing: 12,
           horizontalMargin: 12,
           minWidth: 600,
+          dividerThickness: 0,
           /* 设置成可配置的 */
           columns: [
             DataColumn2(
@@ -51,22 +53,22 @@ class _DataTableViewDemoState extends State<DataTableViewDemo> {
               label: Center(child: Text('Swift')),
             ),
           ],
-          rows: List<DataRow>.generate(
-              100,
-              (index) => DataRow2(
-                    specificRowHeight: 140, // 针对不同的行，计算生成不同的高度
-                    cells: [
-                      DataCell(
-                        CodeView(),
-                      ),
-                      DataCell(
-                        CodeView(),
-                      ),
-                      DataCell(
-                        CodeView(),
-                      ),
-                    ],
-                  ))),
+          rows: List<DataRow>.generate(50, (index) {
+            return DataRow2(
+              specificRowHeight: 140, // 针对不同的行，计算生成不同的高度
+              cells: [
+                DataCell(
+                  CodeView(),
+                ),
+                DataCell(
+                  CodeView(),
+                ),
+                DataCell(
+                  CodeView(),
+                ),
+              ],
+            );
+          })),
     );
   }
 }
