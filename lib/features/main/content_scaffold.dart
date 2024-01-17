@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../generated/l10n.dart';
 import '../../utils/coloors.dart';
 import '../../widgets/custom_icon_button.dart';
-import '../../widgets/demo/data_table_view.dart';
 import '../setting/language_select_dialog.dart';
 import '../setting/setting_dialog.dart';
 

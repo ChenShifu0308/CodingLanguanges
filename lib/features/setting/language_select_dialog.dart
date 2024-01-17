@@ -1,6 +1,6 @@
 import 'dart:collection';
 
-import 'package:coding_languages/features/setting/setting_prodiver.dart';
+import 'package:coding_languages/providers/setting_prodiver.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

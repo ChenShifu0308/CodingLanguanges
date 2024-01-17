@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/language_index.dart';
-
-/// Provider for the selected index
-final indexSelectedProvider = StateProvider<String?>((ref) => null);
+import '../providers/index_selected_provider.dart';
 
 class IndexTree extends ConsumerWidget {
   final LanguageIndex index;
@@ -19,7 +17,8 @@ class IndexTree extends ConsumerWidget {
     var root = TreeNode<LanguageIndexNode>.root();
     return Padding(
       padding: const EdgeInsets.only(left: 5),
-      child: TreeView.simpleTyped<LanguageIndexNode, TreeNode<LanguageIndexNode>>(
+      child:
+          TreeView.simpleTyped<LanguageIndexNode, TreeNode<LanguageIndexNode>>(
         tree: _constructTree(index.data, root),
         showRootNode: false,
         expansionBehavior: ExpansionBehavior.none,

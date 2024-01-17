@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlighter/flutter_highlighter.dart';
 import 'package:flutter_highlighter/themes/github.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../providers/setting_prodiver.dart';
 
-/* https://pub.dev/packages/flutter_highlight */
-class CodeView extends StatelessWidget {
-  const CodeView({super.key});
-  static const String dartCode = """
-// Run the app like this: dart args.dart 1 test
-void main(List<String> arguments) {
-  print(arguments);
+class CodeView extends ConsumerWidget {
+  final String code;
+  final String codingLanguage;
 
-  assert(arguments.length == 2);
-  assert(int.parse(arguments[0]) == 1);
-  assert(arguments[1] == 'test');
-}
-""";
+  const CodeView({super.key, required this.code, required this.codingLanguage});
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    var fontSize = ref.watch(settingModelProvider).codeFontSize;
     return Expanded(
       child: DecoratedBox(
         decoration: BoxDecoration(
@@ -30,13 +26,13 @@ void main(List<String> arguments) {
         child: Padding(
           padding: const EdgeInsets.all(2.0),
           child: HighlightView(
-            dartCode,
-            language: 'dart',
+            code,
+            language: codingLanguage,
             theme: githubTheme,
             padding: const EdgeInsets.all(4),
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               fontFamily: 'Roboto Mono',
-              fontSize: 12,
+              fontSize: fontSize.roundToDouble(),
             ),
           ),
         ),
