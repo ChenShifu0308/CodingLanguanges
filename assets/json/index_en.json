@@ -13,68 +13,101 @@
           "type": "item"
         },
         {
-          "name": "variables",
-          "text": "Variables",
-          "type": "category",
-          "data": [
-            {
-              "name": "variable_declaration",
-              "text": "Variable Declaration",
-              "type": "item"
-            },
-            {
-              "name": "read_only_variables",
-              "text": "Read Only Variables",
-              "type": "item"
-            },
-            {
-              "name": "variable_assignment",
-              "text": "Variable Assignment",
-              "type": "item"
-            },
-            {
-              "name": "variable_scope",
-              "text": "Variable Scope",
-              "type": "item"
-            }
-          ]
+          "name": "hello_world",
+          "text": "Hello World",
+          "type": "item"
         },
         {
-          "name": "operators",
-          "text": "Operators",
-          "type": "category"
+          "name": "variables_constants",
+          "text": "Variables And Constants",
+          "type": "item"
         },
         {
-          "name": "comments",
-          "text": "Comments",
-          "type": "category"
+          "name": "explicit_types",
+          "text": "Explicit Types",
+          "type": "item"
         },
         {
-          "name": "functions",
-          "text": "Functions",
-          "type": "category",
-          "data": [
-            {
-              "name": "function_declaration",
-              "text": "Function Declaration",
-              "type": "item"
-            },
-            {
-              "name": "function_call",
-              "text": "Function Call",
-              "type": "item"
-            },
-            {
-              "name": "function_parameters",
-              "text": "Function Parameters",
-              "type": "item"
-            },
-            {
-              "name": "function_return",
-              "text": "Function Return",
-              "type": "item"
-            }
-          ]
+          "name": "tye_inference",
+          "text": "Type Inference",
+          "type": "item"
+        },
+        {
+          "name": "type_aliases",
+          "text": "Type Aliases",
+          "type": "item"
+        },
+        {
+          "name": "smart_casts",
+          "text": "Smart casts",
+          "type": "item"
+        },
+        {
+          "name": "equality",
+          "text": "Equality",
+          "type": "item"
+        },
+        {
+          "name": "nullable_nonnull_nullish_coalescing",
+          "text": "Nullable/NonNull/Nullish Coalescing",
+          "type": "item"
+        },
+        {
+          "name": "string_interpolation",
+          "text": "String Interpolation",
+          "type": "item"
+        },
+        {
+          "name": "range_operator",
+          "text": "Range Operator",
+          "type": "item"
+        },
+        {
+          "name": "inclusive_range_operator",
+          "text": "Inclusive Range Operator",
+          "type": "item"
+        }
+      ]
+    },
+    {
+      "name": "collections",
+      "text": "COLLECTIONS",
+      "type": "category",
+      "data": [
+        {
+          "name": "arrays_list",
+          "text": "Arrays / List",
+          "type": "item"
+        },
+        {
+          "name": "set",
+          "text": "Set",
+          "type": "item"
+        },
+        {
+          "name": "stream_sequence",
+          "text": "Stream/Sequence",
+          "type": "item"
+        },
+        {
+          "name": "map",
+          "text": "Map",
+          "type": "item"
+        },
+        {
+          "name": "tuple",
+          "text": "Tuple",
+          "type": "item"
+        },
+        {
+          "name": "filter_map_reduce",
+          "text": "Filter/Map/Reduce",
+          "type": "item"
+        },
+        {
+          "name": "empty_collections",
+          "text": "Empty Collections",
+          "type": "item"
         }
       ]
     },
@@ -84,23 +117,58 @@
       "type": "category",
       "data": [
         {
-          "name": "function_declaration",
-          "text": "Function Declaration",
+          "name": "functions",
+          "text": "Functions",
           "type": "item"
         },
         {
-          "name": "function_call",
-          "text": "Function Call",
+          "name": "variable_number_of_arguments",
+          "text": "Variable Number Of Arguments",
           "type": "item"
         },
         {
-          "name": "function_parameters",
-          "text": "Function Parameters",
+          "name": "function_type",
+          "text": "Function Type",
           "type": "item"
         },
         {
-          "name": "function_return",
-          "text": "Function Return",
+          "name": "functional_interface",
+          "text": "Functional Interface",
+          "type": "item"
+        },
+        {
+          "name": "lambda_arrow_function",
+          "text": "Lambda/Arrow Function",
+          "type": "item"
+        },
+        {
+          "name": "named_arguments",
+          "text": "Named Arguments",
+          "type": "item"
+        },
+        {
+          "name": "functions_generics",
+          "text": "Function Generics",
+          "type": "item"
+        },
+        {
+          "name": "generator_function",
+          "text": "Generator Function",
+          "type": "item"
+        },
+        {
+          "name": "async_generator_function",
+          "text": "Async Generator Function",
+          "type": "item"
+        },
+        {
+          "name": "optional_default_value_params",
+          "text": "Optional/Default Value Params",
+          "type": "item"
+        },
+        {
+          "name": "method_extension",
+          "text": "Method Extension",
           "type": "item"
         }
       ]
