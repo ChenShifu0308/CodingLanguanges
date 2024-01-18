@@ -10,12 +10,25 @@ class LanguageIndex {
   final String language; // 'zh' or 'en';
   final List<LanguageIndexNode> data;
 
-  LanguageIndex({required this.name, required this.language, required this.data});
+  LanguageIndex(
+      {required this.name, required this.language, required this.data});
 
   factory LanguageIndex.fromJson(Map<String, dynamic> json) =>
       _$LanguageIndexFromJson(json);
 
   Map<String, dynamic> toJson() => _$LanguageIndexToJson(this);
+
+  List<LanguageIndexNode> getAllNodesInOrder() {
+    List<LanguageIndexNode> result = [];
+    for (var item in data) {
+      if (item.type == LanguageIndexType.category) {
+        result.addAll(item.getAllNodesInOrder());
+      } else {
+        result.add(item);
+      }
+    }
+    return result;
+  }
 }
 
 @JsonSerializable()
@@ -33,6 +46,19 @@ class LanguageIndexNode {
       _$LanguageIndexNodeFromJson(json);
 
   Map<String, dynamic> toJson() => _$LanguageIndexNodeToJson(this);
+
+  List<LanguageIndexNode> getAllNodesInOrder() {
+    List<LanguageIndexNode> result = [this];
+    if (data == null) return result;
+    for (var item in data!) {
+      if (item.type == LanguageIndexType.category) {
+        result.addAll(item.getAllNodesInOrder());
+      } else {
+        result.add(item);
+      }
+    }
+    return result;
+  }
 }
 
 enum LanguageIndexType {

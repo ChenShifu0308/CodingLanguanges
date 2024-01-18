@@ -14,7 +14,8 @@ class CodeView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     var fontSize = ref.watch(settingModelProvider).codeFontSize;
-    return Expanded(
+    return SizedBox(
+      width: 300,
       child: DecoratedBox(
         decoration: BoxDecoration(
           border: Border.all(
