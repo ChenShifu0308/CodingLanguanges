@@ -153,7 +153,7 @@ class CodesCompareRow extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Text(
           node.text,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.headlineLarge,
         ),
       ),
     );
@@ -163,11 +163,12 @@ class CodesCompareRow extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-              margin: const EdgeInsets.symmetric(vertical: 20),
+              margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 4),
               child: Text(node.text,
-                  style: Theme.of(context).textTheme.headlineSmall)),
+                  style: Theme.of(context).textTheme.titleMedium)),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

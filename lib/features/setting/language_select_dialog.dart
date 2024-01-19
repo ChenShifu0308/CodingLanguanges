@@ -57,99 +57,91 @@ class _LanguageSelectDialogState extends ConsumerState<LanguageSelectDialog> {
         borderRadius: BorderRadius.all(Radius.circular(20.0)),
       ),
       title: Text(S.current.languages_selection_dialog_title),
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              DropdownMenu<String>(
-                initialSelection: selectedCodingLanguage1,
-                requestFocusOnTap: true,
-                label: Text(S.current.first_coding_language),
-                onSelected: (String? codingLanguage) {
-                  setState(() {
-                    selectedCodingLanguage1 = codingLanguage;
-                  });
-                },
-                dropdownMenuEntries: allLanguages
-                    .map<DropdownMenuEntry<String>>((String codingLanguage) {
-                  return DropdownMenuEntry<String>(
-                    value: codingLanguage,
-                    label: codingLanguage,
-                  );
-                }).toList(),
-              ),
-              const SizedBox(
-                width: 5,
-              ),
-              DropdownMenu<String>(
-                initialSelection: selectedCodingLanguage2,
-                requestFocusOnTap: true,
-                label: Text(S.current.second_coding_language),
-                onSelected: (String? codingLanguage) {
-                  setState(() {
-                    selectedCodingLanguage2 = codingLanguage;
-                  });
-                },
-                dropdownMenuEntries: allLanguages
-                    .map<DropdownMenuEntry<String>>((String codingLanguage) {
-                  return DropdownMenuEntry<String>(
-                    value: codingLanguage,
-                    label: codingLanguage,
-                  );
-                }).toList(),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              DropdownMenu<String>(
-                initialSelection: selectedCodingLanguage3,
-                requestFocusOnTap: true,
-                enabled: isVip,
-                label: Text(S.current.third_coding_language),
-                onSelected: (String? codingLanguage) {
-                  setState(() {
-                    selectedCodingLanguage3 = codingLanguage;
-                  });
-                },
-                dropdownMenuEntries: allLanguages
-                    .map<DropdownMenuEntry<String>>((String codingLanguage) {
-                  return DropdownMenuEntry<String>(
-                    value: codingLanguage,
-                    label: codingLanguage,
-                  );
-                }).toList(),
-              ),
-              const SizedBox(
-                width: 5,
-              ),
-              DropdownMenu<String>(
-                initialSelection: selectedCodingLanguage4,
-                requestFocusOnTap: true,
-                enabled: isVip,
-                label: Text(S.current.fourth_coding_language),
-                onSelected: (String? codingLanguage) {
-                  setState(() {
-                    selectedCodingLanguage4 = codingLanguage;
-                  });
-                },
-                dropdownMenuEntries: allLanguages
-                    .map<DropdownMenuEntry<String>>((String codingLanguage) {
-                  return DropdownMenuEntry<String>(
-                    value: codingLanguage,
-                    label: codingLanguage,
-                  );
-                }).toList(),
-              ),
-            ],
-          ),
-        ],
+      content: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            DropdownMenu<String>(
+              initialSelection: selectedCodingLanguage1,
+              requestFocusOnTap: true,
+              label: Text(S.current.first_coding_language),
+              onSelected: (String? codingLanguage) {
+                setState(() {
+                  selectedCodingLanguage1 = codingLanguage;
+                });
+              },
+              dropdownMenuEntries: allLanguages
+                  .map<DropdownMenuEntry<String>>((String codingLanguage) {
+                return DropdownMenuEntry<String>(
+                  value: codingLanguage,
+                  label: codingLanguage,
+                );
+              }).toList(),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            DropdownMenu<String>(
+              initialSelection: selectedCodingLanguage2,
+              requestFocusOnTap: true,
+              label: Text(S.current.second_coding_language),
+              onSelected: (String? codingLanguage) {
+                setState(() {
+                  selectedCodingLanguage2 = codingLanguage;
+                });
+              },
+              dropdownMenuEntries: allLanguages
+                  .map<DropdownMenuEntry<String>>((String codingLanguage) {
+                return DropdownMenuEntry<String>(
+                  value: codingLanguage,
+                  label: codingLanguage,
+                );
+              }).toList(),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            DropdownMenu<String>(
+              initialSelection: selectedCodingLanguage3,
+              requestFocusOnTap: true,
+              enabled: isVip,
+              label: Text(S.current.third_coding_language),
+              onSelected: (String? codingLanguage) {
+                setState(() {
+                  selectedCodingLanguage3 = codingLanguage;
+                });
+              },
+              dropdownMenuEntries: allLanguages
+                  .map<DropdownMenuEntry<String>>((String codingLanguage) {
+                return DropdownMenuEntry<String>(
+                  value: codingLanguage,
+                  label: codingLanguage,
+                );
+              }).toList(),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            DropdownMenu<String>(
+              initialSelection: selectedCodingLanguage4,
+              requestFocusOnTap: true,
+              enabled: isVip,
+              label: Text(S.current.fourth_coding_language),
+              onSelected: (String? codingLanguage) {
+                setState(() {
+                  selectedCodingLanguage4 = codingLanguage;
+                });
+              },
+              dropdownMenuEntries: allLanguages
+                  .map<DropdownMenuEntry<String>>((String codingLanguage) {
+                return DropdownMenuEntry<String>(
+                  value: codingLanguage,
+                  label: codingLanguage,
+                );
+              }).toList(),
+            ),
+          ],
+        ),
       ),
       actions: <Widget>[
         TextButton(
