@@ -14,29 +14,48 @@ class CodeView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     var fontSize = ref.watch(settingModelProvider).codeFontSize;
-    return SizedBox(
-      width: 300,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.white.withAlpha(200),
-            width: 4,
-          ),
-          borderRadius: BorderRadius.circular(4),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: HighlightView(
-            code,
-            language: codingLanguage,
-            theme: githubTheme,
-            padding: const EdgeInsets.all(4),
-            textStyle: TextStyle(
-              fontFamily: 'Roboto Mono',
-              fontSize: fontSize.roundToDouble(),
+    return Container(
+      margin: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              codingLanguage,
+              style: TextStyle(
+                fontSize: fontSize * 0.8,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
-        ),
+          SizedBox(
+            width: fontSize * 23,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.white.withAlpha(200),
+                  width: 4,
+                ),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Container(
+                color: Color(0xFFF8F8F8),
+                padding: const EdgeInsets.all(18.0),
+                child: HighlightView(
+                  code,
+                  language: codingLanguage,
+                  theme: githubTheme,
+                  padding: const EdgeInsets.all(4),
+                  textStyle: TextStyle(
+                    fontFamily: 'Roboto Mono',
+                    fontSize: fontSize.roundToDouble(),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

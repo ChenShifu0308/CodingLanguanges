@@ -1,1 +1,125 @@
-{"coding_language": "Swift", "data": [{"name": "entry_point", "content": ""}, {"name": "hello_world", "content": ""}, {"name": "variables_constants", "content": ""}, {"name": "explicit_types", "content": ""}, {"name": "tye_inference", "content": ""}, {"name": "type_aliases", "content": ""}, {"name": "smart_casts", "content": ""}, {"name": "equality", "content": ""}, {"name": "nullable_nonnull_nullish_coalescing", "content": ""}, {"name": "string_interpolation", "content": ""}, {"name": "range_operator", "content": ""}, {"name": "inclusive_range_operator", "content": ""}, {"name": "arrays_list", "content": ""}, {"name": "set", "content": ""}, {"name": "stream_sequence", "content": ""}, {"name": "map", "content": ""}, {"name": "tuple", "content": ""}, {"name": "filter_map_reduce", "content": ""}, {"name": "empty_collections", "content": ""}, {"name": "functions", "content": ""}, {"name": "variable_number_of_arguments", "content": ""}, {"name": "function_type", "content": ""}, {"name": "functional_interface", "content": ""}, {"name": "lambda_arrow_function", "content": ""}, {"name": "named_arguments", "content": ""}, {"name": "functions_generics", "content": ""}, {"name": "generator_function", "content": ""}, {"name": "async_generator_function", "content": ""}, {"name": "optional_default_value_params", "content": ""}, {"name": "method_extension", "content": ""}]}
+{
+  "coding_language": "Swift",
+  "data": [
+    {
+      "name": "entry_point",
+      "content": ""
+    },
+    {
+      "name": "hello_world",
+      "content": "print(\"Hello, world!\")"
+    },
+    {
+      "name": "variables_constants",
+      "content": "var myVariable = 42\nmyVariable = 50\nlet myConstant = 42"
+    },
+    {
+      "name": "explicit_types",
+      "content": "let explicitDouble: Double = 70"
+    },
+    {
+      "name": "tye_inference",
+      "content": "let label = \"The width is \"\nlet width = 94\nlet widthLabel = label + String(width)"
+    },
+    {
+      "name": "type_aliases",
+      "content": ""
+    },
+    {
+      "name": "smart_casts",
+      "content": ""
+    },
+    {
+      "name": "equality",
+      "content": ""
+    },
+    {
+      "name": "nullable_nonnull_nullish_coalescing",
+      "content": ""
+    },
+    {
+      "name": "string_interpolation",
+      "content": ""
+    },
+    {
+      "name": "range_operator",
+      "content": "let names = [\"Anna\", \"Alex\", \"Brian\", \"Jack\"]\nlet count = names.count\nfor i in 0..<count {\n    print(\"Person \\(i + 1) is called \\(names[i])\")\n}\n// Person 1 is called Anna\n// Person 2 is called Alex\n// Person 3 is called Brian\n// Person 4 is called Jack"
+    },
+    {
+      "name": "inclusive_range_operator",
+      "content": "for index in 1...5 {\n    print(\"\\(index) times 5 is \\(index * 5)\")\n}\n// 1 times 5 is 5\n// 2 times 5 is 10\n// 3 times 5 is 15\n// 4 times 5 is 20\n// 5 times 5 is 25"
+    },
+    {
+      "name": "arrays_list",
+      "content": "var shoppingList = [\"catfish\", \"water\",\n    \"tulips\", \"blue paint\"]\nshoppingList[1] = \"bottle of water\""
+    },
+    {
+      "name": "set",
+      "content": ""
+    },
+    {
+      "name": "stream_sequence",
+      "content": ""
+    },
+    {
+      "name": "map",
+      "content": "var occupations = [\n    \"Malcolm\": \"Captain\",\n    \"Kaylee\": \"Mechanic\",\n]\noccupations[\"Jayne\"] = \"Public Relations\""
+    },
+    {
+      "name": "tuple",
+      "content": ""
+    },
+    {
+      "name": "filter_map_reduce",
+      "content": ""
+    },
+    {
+      "name": "empty_collections",
+      "content": "let emptyArray = [String]()\nlet emptyDictionary = [String: Float]()"
+    },
+    {
+      "name": "functions",
+      "content": "func greet(_ name: String,_ day: String) -> String {\n    return \"Hello \\(name), today is \\(day).\"\n}\ngreet(\"Bob\", \"Tuesday\")"
+    },
+    {
+      "name": "variable_number_of_arguments",
+      "content": "func sumOf(_ numbers: Int...) -> Int {\n    var sum = 0\n    for number in numbers {\n        sum += number\n    }\n    return sum\n}\nsumOf(42, 597, 12)"
+    },
+    {
+      "name": "function_type",
+      "content": "func makeIncrementer() -> (Int -> Int) {\n    func addOne(number: Int) -> Int {\n        return 1 + number\n    }\n    return addOne\n}\nlet increment = makeIncrementer()\nincrement(7)"
+    },
+    {
+      "name": "functional_interface",
+      "content": ""
+    },
+    {
+      "name": "lambda_arrow_function",
+      "content": ""
+    },
+    {
+      "name": "named_arguments",
+      "content": ""
+    },
+    {
+      "name": "functions_generics",
+      "content": ""
+    },
+    {
+      "name": "generator_function",
+      "content": ""
+    },
+    {
+      "name": "async_generator_function",
+      "content": ""
+    },
+    {
+      "name": "optional_default_value_params",
+      "content": ""
+    },
+    {
+      "name": "method_extension",
+      "content": ""
+    }
+  ]
+}

@@ -162,42 +162,44 @@ class CodesCompareRow extends StatelessWidget {
   Widget _buildItemRow(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Row(
+      child: Column(
         children: [
-          SizedBox(
-            width: 200,
-            child: Text(
-              node.text,
-              style: Theme.of(context).textTheme.subtitle1,
-            ),
+          Container(
+              margin: const EdgeInsets.symmetric(vertical: 20),
+              child: Text(node.text,
+                  style: Theme.of(context).textTheme.headlineSmall)),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CodeView(
+                code: firstLanguageData.data
+                    .firstWhere((element) => element.name == node.name)
+                    .content,
+                codingLanguage: firstLanguageData.language,
+              ),
+              if (secondLanguageData != null)
+                CodeView(
+                  code: secondLanguageData!.data
+                      .firstWhere((element) => element.name == node.name)
+                      .content,
+                  codingLanguage: secondLanguageData!.language,
+                ),
+              if (thirdLanguageData != null)
+                CodeView(
+                  code: thirdLanguageData!.data
+                      .firstWhere((element) => element.name == node.name)
+                      .content,
+                  codingLanguage: thirdLanguageData!.language,
+                ),
+              if (fourthLanguageData != null)
+                CodeView(
+                  code: fourthLanguageData!.data
+                      .firstWhere((element) => element.name == node.name)
+                      .content,
+                  codingLanguage: fourthLanguageData!.language,
+                ),
+            ],
           ),
-          CodeView(
-            code: firstLanguageData.data
-                .firstWhere((element) => element.name == node.name)
-                .content,
-            codingLanguage: firstLanguageData.language,
-          ),
-          if (secondLanguageData != null)
-            CodeView(
-              code: secondLanguageData!.data
-                  .firstWhere((element) => element.name == node.name)
-                  .content,
-              codingLanguage: secondLanguageData!.language,
-            ),
-          if (thirdLanguageData != null)
-            CodeView(
-              code: thirdLanguageData!.data
-                  .firstWhere((element) => element.name == node.name)
-                  .content,
-              codingLanguage: thirdLanguageData!.language,
-            ),
-          if (fourthLanguageData != null)
-            CodeView(
-              code: fourthLanguageData!.data
-                  .firstWhere((element) => element.name == node.name)
-                  .content,
-              codingLanguage: fourthLanguageData!.language,
-            ),
         ],
       ),
     );

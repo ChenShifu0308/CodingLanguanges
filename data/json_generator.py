@@ -1,9 +1,9 @@
 import csv
 import json
 
-tsv_file = open("languages.tsv", "r")
+tsv_file = open("languages.csv", "r")
 
-tsv_reader = csv.reader(tsv_file, delimiter="\t")
+tsv_reader = csv.reader(tsv_file, delimiter=",")
 header = next(tsv_reader)
 languages = header[3:]
 print(languages)
