@@ -2,6 +2,7 @@ import 'package:coding_languages/providers/setting_prodiver.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../features/main/homepage.dart';
 import '../models/language.dart';
 import '../models/language_index.dart';
 import '../providers/index_provider.dart';
@@ -16,8 +17,6 @@ class CodesCompareView extends ConsumerStatefulWidget {
 }
 
 class _CodesCompareViewState extends ConsumerState<CodesCompareView> {
-  static final List<GlobalKey> _key = List.generate(50, (index) => GlobalKey());
-
   @override
   void initState() {
     super.initState();
@@ -74,7 +73,7 @@ class _CodesCompareViewState extends ConsumerState<CodesCompareView> {
   }
 }
 
-class CodesCompareTable extends StatefulWidget {
+class CodesCompareTable extends ConsumerStatefulWidget {
   final Language firstLanguageData;
   final Language? secondLanguageData;
   final Language? thirdLanguageData;
@@ -92,10 +91,10 @@ class CodesCompareTable extends StatefulWidget {
   });
 
   @override
-  State<CodesCompareTable> createState() => _CodesCompareTableState();
+  ConsumerState<CodesCompareTable> createState() => _CodesCompareTableState();
 }
 
-class _CodesCompareTableState extends State<CodesCompareTable> {
+class _CodesCompareTableState extends ConsumerState<CodesCompareTable> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -108,6 +107,7 @@ class _CodesCompareTableState extends State<CodesCompareTable> {
                 .getAllNodesInOrder()
                 .map(
                   (e) => CodesCompareRow(
+                      key: globalIndexKeyMap[e.name],
                       node: e,
                       firstLanguageData: widget.firstLanguageData,
                       secondLanguageData: widget.secondLanguageData,

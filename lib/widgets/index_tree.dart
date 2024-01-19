@@ -1,4 +1,5 @@
 import 'package:animated_tree_view/animated_tree_view.dart';
+import 'package:coding_languages/features/main/homepage.dart';
 import 'package:coding_languages/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -40,6 +41,13 @@ class IndexTree extends ConsumerWidget {
         onItemTap: (value) => {
           logger.i('onItemTap: ${value.data?.name}'),
           ref.read(indexSelectedProvider.notifier).state = value.data?.name,
+          if (value.data!.type == LanguageIndexType.item)
+            {
+              Scrollable.ensureVisible(
+                globalIndexKeyMap[value.data?.name]!.currentContext!,
+                duration: const Duration(milliseconds: 500),
+              ),
+            },
           if (value.data?.type == LanguageIndexType.item && isInDrawer)
             {
               Navigator.of(context).pop(),
