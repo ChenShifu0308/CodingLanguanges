@@ -37,7 +37,6 @@ class ContentScaffold extends StatelessWidget {
             height: 0.5,
           ),
         ),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
         title: Text(
           S.current.app_name,

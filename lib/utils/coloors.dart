@@ -13,4 +13,6 @@ class Coloors {
   static const Color backgroundLight = Color(0xFFFFFFFF);
   static const Color greyBackground = Color(0xFF202C33);
   static const Color drawerColor = Color(0xFFFFFBFE);
+  static const Color appBarColor = Color(0xFF414141);
+
  }

@@ -18,7 +18,7 @@ final List<String> allLanguages = [
 /// Provides the languages data
 final languagesDataProvider =
     FutureProvider.family<Language, String>((ref, language) async {
-  final content = AssetUtil.loadJsonFromAssets('languages/$language.json')
+  final content = AssetUtil.loadJsonFromAssets('assets/languages/$language.json')
       .then((value) => Language.fromJson(value));
   return content;
 });

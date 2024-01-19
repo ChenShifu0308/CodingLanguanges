@@ -11,7 +11,7 @@ ThemeData lightTheme() {
     scaffoldBackgroundColor: Coloors.backgroundLight,
     extensions: [CustomThemeExtension.lightMode],
     appBarTheme: const AppBarTheme(
-      backgroundColor: Coloors.greenLight,
+      backgroundColor: Coloors.appBarColor,
       titleTextStyle: TextStyle(
         fontSize: 18,
         color: Coloors.greyLight,
