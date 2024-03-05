@@ -1,0 +1,261 @@
+{
+    "name": "Index",
+    "language": "EN",
+    "data": [
+        {
+            "name": "variables_constants",
+            "text": "Variables And Constants",
+            "type": "item"
+        },
+        {
+            "name": "explicit_types",
+            "text": "Explicit Types",
+            "type": "item"
+        },
+        {
+            "name": "tye_inference",
+            "text": "Type Inference",
+            "type": "item"
+        },
+        {
+            "name": "type_aliases",
+            "text": "Type Aliases",
+            "type": "item"
+        },
+        {
+            "name": "smart_casts",
+            "text": "Smart casts",
+            "type": "item"
+        },
+        {
+            "name": "equality",
+            "text": "Equality",
+            "type": "item"
+        },
+        {
+            "name": "nullable_nonnull_nullish_coalescing",
+            "text": "Nullable/NonNull/Nullish Coalescing",
+            "type": "item"
+        },
+        {
+            "name": "string_interpolation",
+            "text": "String Interpolation",
+            "type": "item"
+        },
+        {
+            "name": "range_operator",
+            "text": "Range Operator",
+            "type": "item"
+        },
+        {
+            "name": "inclusive_range_operator",
+            "text": "Inclusive Range Operator",
+            "type": "item"
+        },
+        {
+            "name": "arrays_list",
+            "text": "Arrays/List",
+            "type": "item"
+        },
+        {
+            "name": "set",
+            "text": "Set",
+            "type": "item"
+        },
+        {
+            "name": "stream_sequence",
+            "text": "Stream/Sequence",
+            "type": "item"
+        },
+        {
+            "name": "map",
+            "text": "Map",
+            "type": "item"
+        },
+        {
+            "name": "tuple",
+            "text": "Tuple",
+            "type": "item"
+        },
+        {
+            "name": "filter_map_reduce",
+            "text": "Filter/Map/Reduce",
+            "type": "item"
+        },
+        {
+            "name": "empty_collections",
+            "text": "Empty Collections",
+            "type": "item"
+        },
+        {
+            "name": "functions",
+            "text": "Functions",
+            "type": "item"
+        },
+        {
+            "name": "variable_number_of_arguments",
+            "text": "Variable Number Of Arguments",
+            "type": "item"
+        },
+        {
+            "name": "function_type",
+            "text": "Function Type",
+            "type": "item"
+        },
+        {
+            "name": "functional_interface",
+            "text": "Functional Interface",
+            "type": "item"
+        },
+        {
+            "name": "lambda_arrow_function",
+            "text": "Lambda/Arrow Function",
+            "type": "item"
+        },
+        {
+            "name": "named_arguments",
+            "text": "Named Arguments",
+            "type": "item"
+        },
+        {
+            "name": "functions_generics",
+            "text": "Function Generics",
+            "type": "item"
+        },
+        {
+            "name": "generator_function",
+            "text": "Generator Function",
+            "type": "item"
+        },
+        {
+            "name": "async_generator_function",
+            "text": "Async Generator Function",
+            "type": "item"
+        },
+        {
+            "name": "optional_default_value_params",
+            "text": "Optional/Default Value Params",
+            "type": "item"
+        },
+        {
+            "name": "method_extension",
+            "text": "Method Extension",
+            "type": "item"
+        },
+        {
+            "name": "class_declaration",
+            "text": "Class Declaration",
+            "type": "item"
+        },
+        {
+            "name": "class_usage",
+            "text": "Class Usage",
+            "type": "item"
+        },
+        {
+            "name": "subclass",
+            "text": "Subclass",
+            "type": "item"
+        },
+        {
+            "name": "checking_type",
+            "text": "Checking Type",
+            "type": "item"
+        },
+        {
+            "name": "downcasting",
+            "text": "DownCasting",
+            "type": "item"
+        },
+        {
+            "name": "protocal_interface",
+            "text": "Protocol/Interface",
+            "type": "item"
+        },
+        {
+            "name": "mixins",
+            "text": "Mixins",
+            "type": "item"
+        },
+        {
+            "name": "enums",
+            "text": "Enums",
+            "type": "item"
+        },
+        {
+            "name": "annotations_decorators",
+            "text": "Annotations/Decorators",
+            "type": "item"
+        },
+        {
+            "name": "object_expressions",
+            "text": "Object expressions",
+            "type": "item"
+        },
+        {
+            "name": "object_as_function",
+            "text": "Object as Function/invoke operator/Hybrid Types",
+            "type": "item"
+        },
+        {
+            "name": "indexed_operator",
+            "text": "Indexed operator/Indexable Types",
+            "type": "item"
+        },
+        {
+            "name": "data_class",
+            "text": "Data Class",
+            "type": "item"
+        },
+        {
+            "name": "readonly_property",
+            "text": "Readonly Property",
+            "type": "item"
+        },
+        {
+            "name": "generics",
+            "text": "Generics",
+            "type": "item"
+        },
+        {
+            "name": "dynamic_keys",
+            "text": "Dynamic keys",
+            "type": "item"
+        },
+        {
+            "name": "coroutines_promise",
+            "text": "Coroutines/Promise",
+            "type": "item"
+        },
+        {
+            "name": "flow_observable",
+            "text": "Flow/Observable",
+            "type": "item"
+        },
+        {
+            "name": "namespace",
+            "text": "Namespace",
+            "type": "item"
+        },
+        {
+            "name": "external_declare",
+            "text": "External Declare",
+            "type": "item"
+        },
+        {
+            "name": "module_export",
+            "text": "Module Export",
+            "type": "item"
+        },
+        {
+            "name": "unit_test",
+            "text": "Unit Test",
+            "type": "item"
+        },
+        {
+            "name": "special_usages",
+            "text": "Special Usages",
+            "type": "item"
+        }
+    ]
+}

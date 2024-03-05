@@ -1,10 +1,7 @@
-# TODO
-- [ X ] Add 2 dialogs
-- [ X ] Create a table to edit all the languages detail.
-- [ X ] Add the data table view for the languages detail.
-- [] Theme - Dark and light mode, make it more beautiful.
-- [] Firebase and google login
-- [] Multi-language support
+# Summary 
+An app to show different programming languages and their similarities.
+
+![homepage](./docs/images/homepage.jpg)
 
 ## Dependencies
 Flutter: 3.16.0

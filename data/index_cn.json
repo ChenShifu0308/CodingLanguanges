@@ -1,0 +1,261 @@
+{
+    "name": "Index",
+    "language": "CN",
+    "data": [
+        {
+            "name": "variables_constants",
+            "text": "\u53d8\u91cf/\u5e38\u91cf",
+            "type": "item"
+        },
+        {
+            "name": "explicit_types",
+            "text": "\u663e\u5f0f\u7c7b\u578b",
+            "type": "item"
+        },
+        {
+            "name": "tye_inference",
+            "text": "\u7c7b\u578b\u63a8\u7406",
+            "type": "item"
+        },
+        {
+            "name": "type_aliases",
+            "text": "\u7c7b\u578b\u522b\u540d",
+            "type": "item"
+        },
+        {
+            "name": "smart_casts",
+            "text": "\u667a\u80fd\u7c7b\u578b\u8f6c\u6362",
+            "type": "item"
+        },
+        {
+            "name": "equality",
+            "text": "\u5bf9\u8c61\u76f8\u7b49",
+            "type": "item"
+        },
+        {
+            "name": "nullable_nonnull_nullish_coalescing",
+            "text": "\u53ef\u7a7a/\u975e\u7a7a/\u7a7a\u503c\u5408\u5e76",
+            "type": "item"
+        },
+        {
+            "name": "string_interpolation",
+            "text": "\u5b57\u7b26\u4e32\u63d2\u5165",
+            "type": "item"
+        },
+        {
+            "name": "range_operator",
+            "text": "\u8303\u56f4\u64cd\u4f5c\u7b26",
+            "type": "item"
+        },
+        {
+            "name": "inclusive_range_operator",
+            "text": "\u95ed\u533a\u95f4\u8303\u56f4\u64cd\u4f5c\u7b26",
+            "type": "item"
+        },
+        {
+            "name": "arrays_list",
+            "text": "\u6570\u7ec4/\u5217\u8868",
+            "type": "item"
+        },
+        {
+            "name": "set",
+            "text": "Set",
+            "type": "item"
+        },
+        {
+            "name": "stream_sequence",
+            "text": "\u6d41/\u5e8f\u5217",
+            "type": "item"
+        },
+        {
+            "name": "map",
+            "text": "Map",
+            "type": "item"
+        },
+        {
+            "name": "tuple",
+            "text": "\u5143\u7ec4",
+            "type": "item"
+        },
+        {
+            "name": "filter_map_reduce",
+            "text": "\u8fc7\u6ee4/\u6620\u5c04/\u89c4\u7ea6",
+            "type": "item"
+        },
+        {
+            "name": "empty_collections",
+            "text": "\u7a7a\u96c6\u5408",
+            "type": "item"
+        },
+        {
+            "name": "functions",
+            "text": "\u51fd\u6570",
+            "type": "item"
+        },
+        {
+            "name": "variable_number_of_arguments",
+            "text": "\u53ef\u53d8\u6570\u91cf\u53c2\u6570",
+            "type": "item"
+        },
+        {
+            "name": "function_type",
+            "text": "\u51fd\u6570\u8fd4\u56de\u7c7b\u578b",
+            "type": "item"
+        },
+        {
+            "name": "functional_interface",
+            "text": "\u51fd\u6570\u5f0f\u63a5\u53e3",
+            "type": "item"
+        },
+        {
+            "name": "lambda_arrow_function",
+            "text": "Lambda(\u7bad\u5934)\u51fd\u6570",
+            "type": "item"
+        },
+        {
+            "name": "named_arguments",
+            "text": "\u547d\u540d\u53c2\u6570",
+            "type": "item"
+        },
+        {
+            "name": "functions_generics",
+            "text": "\u6cdb\u578b\u51fd\u6570",
+            "type": "item"
+        },
+        {
+            "name": "generator_function",
+            "text": "\u751f\u6210\u5668\u51fd\u6570",
+            "type": "item"
+        },
+        {
+            "name": "async_generator_function",
+            "text": "\u5f02\u6b65\u751f\u6210\u5668\u51fd\u6570",
+            "type": "item"
+        },
+        {
+            "name": "optional_default_value_params",
+            "text": "\u53ef\u9009/\u9ed8\u8ba4\u503c\u53c2\u6570",
+            "type": "item"
+        },
+        {
+            "name": "method_extension",
+            "text": "\u62d3\u5c55\u65b9\u6cd5",
+            "type": "item"
+        },
+        {
+            "name": "class_declaration",
+            "text": "\u7c7b\u7684\u5b9a\u4e49",
+            "type": "item"
+        },
+        {
+            "name": "class_usage",
+            "text": "\u7c7b\u7684\u4f7f\u7528",
+            "type": "item"
+        },
+        {
+            "name": "subclass",
+            "text": "\u5b50\u7c7b",
+            "type": "item"
+        },
+        {
+            "name": "checking_type",
+            "text": "\u7c7b\u578b\u5224\u65ad",
+            "type": "item"
+        },
+        {
+            "name": "downcasting",
+            "text": "\u5411\u4e0b\u8f6c\u6362",
+            "type": "item"
+        },
+        {
+            "name": "protocal_interface",
+            "text": "\u534f\u8bae/\u63a5\u53e3",
+            "type": "item"
+        },
+        {
+            "name": "mixins",
+            "text": "\u591a\u6001",
+            "type": "item"
+        },
+        {
+            "name": "enums",
+            "text": "\u679a\u4e3e",
+            "type": "item"
+        },
+        {
+            "name": "annotations_decorators",
+            "text": "\u6ce8\u89e3/\u4fee\u9970\u7b26",
+            "type": "item"
+        },
+        {
+            "name": "object_expressions",
+            "text": "\u5bf9\u8c61\u8868\u8fbe\u5f0f",
+            "type": "item"
+        },
+        {
+            "name": "object_as_function",
+            "text": "\u5bf9\u8c61\u51fd\u6570",
+            "type": "item"
+        },
+        {
+            "name": "indexed_operator",
+            "text": "\u7d22\u5f15\u64cd\u4f5c\u7b26/\u53ef\u7d22\u5f15\u7c7b\u578b",
+            "type": "item"
+        },
+        {
+            "name": "data_class",
+            "text": "\u6570\u636e\u7c7b",
+            "type": "item"
+        },
+        {
+            "name": "readonly_property",
+            "text": "\u53ea\u8bfb\u5c5e\u6027",
+            "type": "item"
+        },
+        {
+            "name": "generics",
+            "text": "\u6cdb\u578b",
+            "type": "item"
+        },
+        {
+            "name": "dynamic_keys",
+            "text": "\u52a8\u6001\u952e",
+            "type": "item"
+        },
+        {
+            "name": "coroutines_promise",
+            "text": "\u534f\u7a0b/\u627f\u8bfa",
+            "type": "item"
+        },
+        {
+            "name": "flow_observable",
+            "text": "Flow/Observable\n",
+            "type": "item"
+        },
+        {
+            "name": "namespace",
+            "text": "\u547d\u540d\u7a7a\u95f4",
+            "type": "item"
+        },
+        {
+            "name": "external_declare",
+            "text": "\u5916\u90e8\u58f0\u660e",
+            "type": "item"
+        },
+        {
+            "name": "module_export",
+            "text": "\u6a21\u5757\u5bfc\u51fa",
+            "type": "item"
+        },
+        {
+            "name": "unit_test",
+            "text": "\u5355\u5143\u6d4b\u8bd5",
+            "type": "item"
+        },
+        {
+            "name": "special_usages",
+            "text": "\u7279\u6b8a\u7528\u6cd5",
+            "type": "item"
+        }
+    ]
+}

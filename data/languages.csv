@@ -1,45 +1,76 @@
-Category ,Item_Name,Notes,Kotlin,TypeScript,Swift,Scala,Go,Python,Java,Javascript,Ruby,C++,C#,R,Shell,PHP,Dart,Rust,Perl,VB,OC,Lua
-BASIC,entry_point,,"fun main() {
-    println(""Hello, World!"")
-}","function main() {
-    console.log(""Hello, World!"");
-}
-
-main();",,,,,,,,,,,,,,,,,,
-,hello_world,,"println(""Hello, world!"")","console.log(""Hello, world!"");","print(""Hello, world!"")",,,,,,,,,,,,,,,,,
-,variables_constants,,"var myVariable = 42
+Category,ItemName,EN,CN,Kotlin,TypeScript,Swift,Scala,Go,Python,Java,Javascript,Ruby,C++,C#,R,Shell,PHP,Dart,Rust,Perl,VB,OC,Lua
+BASIC,hello_world,Hello World,Hello World,"println(""Hello, world!"")","console.log(""Hello, world!"");","print(""Hello, world!"")","println(""Hello, world!"")","fmt.Println(""Hello, world!"")","print(""Hello, world!"")",".out.println(""Hello, world!"");","console.log(""Hello, world!"");","puts ""Hello, world!""","std::cout << ""Hello, world!"" << std::endl;","Console.WriteLine(""Hello, world!"");","cat(""Hello, world!\n"")","echo ""Hello, world!""","<?php
+echo ""Hello, world!"";
+?>","print(""Hello, world!"");","println!(""Hello, world!"");","print ""Hello, world!\n"";","Console.WriteLine(""Hello, world!"")","NSLog(@""Hello, world!"");","print(""Hello, world!"")"
+,variables_constants,Variables And Constants,变量/常量,"var myVariable = 42
 myVariable = 50
 val myConstant = 42","let myVariable = 42;
 myVariable = 50;
 const myConstant = 42;","var myVariable = 42
 myVariable = 50
-let myConstant = 42",,,,,,,,,,,,,,,,,
-,explicit_types,,"val explicitDouble: Double = 70.0
-// Boolean
-// Byte, Short, Int, Long, Float, Double, UByte, UShort, UInt, ULong
-// String
-// Any, Unit
-// Nothing
-// dynamic
-external fun require(module:String): dynamic","const explicitDouble: number = 70;
-// boolean
-// number, bigint
-// string
-// any, void
-// never
-// undefined, unknown, null, Symbol, union: string|number, string|object
-declare const welcome: any;",let explicitDouble: Double = 70,,,,,,,,,,,,,,,,,
-,tye_inference,,"val label = ""The width is ""
+let myConstant = 42","var myVariable = 42
+myVariable = 50
+val myConstant = 42","package main
+
+import ""fmt""
+
+func main() {
+    var myVariable int = 42
+    myVariable = 50
+    const myConstant int = 42
+    fmt.Println(myVariable)
+    fmt.Println(myConstant)
+}","myVariable = 42
+myVariable = 50
+myConstant = 42","int myVariable = 42;
+myVariable = 50;
+final int myConstant = 42;
+ ","let myVariable = 42;
+myVariable = 50;
+const myConstant = 42;","my_variable = 42
+my_variable = 50
+my_constant = 42","int myVariable = 42;
+myVariable = 50;
+const int myConstant = 42;","int myVariable = 42;
+myVariable = 50;
+const int myConstant = 42;","myVariable <- 42
+myVariable <- 50
+myConstant <- 42","myVariable=42
+myVariable=50
+myConstant=42","<?php
+$myVariable = 42;
+$myVariable = 50;
+$myConstant = 42;
+?>","var myVariable = 42;
+myVariable = 50;
+final myConstant = 42;","let mut my_variable = 42;
+my_variable = 50;
+let my_constant = 42;","my $myVariable = 42;
+$myVariable = 50;
+my $myConstant = 42;","Dim myVariable As Integer = 42
+myVariable = 50
+Const myConstant As Integer = 42","int myVariable = 42;
+myVariable = 50;
+const int myConstant = 42;","myVariable = 42
+myVariable = 50
+myConstant = 42"
+,explicit_types,Explicit Types,显式类型,"val explicitDouble: Double = 70.0
+",const explicitDouble: number = 70;,let explicitDouble: Double = 70.0,val explicitDouble: Double = 70.0,var explicitDouble float = 70.0,explicitDouble: float = 70.0,final double explicitDouble = 70.0;,const explicitDouble = 70.0;,explicitDouble = 70.0,const double explicitDouble = 70.0;,"const double explicitDouble = 70.0;
+",explicitDouble <- 70.0,explicitDouble=70.0,$explicitDouble = 70.0;,final explicitDouble = 70.0;,"let explicit_double: f = 70.0;
+","my $explicitDouble = 70.0;
+",Dim explicitDouble As Double = 70.0,const double explicitDouble = 70.0;,"explicitDouble = 70.0
+"
+,tye_inference,Type Inference,类型推理,"val label = ""The width is ""
 val width = 94
 val widthLabel = label + width","const label = ""The width is "";
 const width = 94;
 const widthLabel = label + width;","let label = ""The width is ""
 let width = 94
 let widthLabel = label + String(width)",,,,,,,,,,,,,,,,,
-,type_aliases,,"typealias Name = String;
+,type_aliases,Type Aliases,类型别名,"typealias Name = String;
 typealias NameResolver = () -> String;","type Name = string;
 type NameResolver = () => string;",,,,,,,,,,,,,,,,,,
-,smart_casts,,"fun demo(x: Any) {
+,smart_casts,Smart casts,智能类型转换,"fun demo(x: Any) {
     if (x is String) {
         print(x.length) // x is automatically cast to String
     }
@@ -49,7 +80,7 @@ type NameResolver = () => string;",,,,,,,,,,,,,,,,,,
     console.log(arg.toUpperCase());
   }
 }",,,,,,,,,,,,,,,,,,
-,equality,,"//Structural Equality (‘==’), Referential equality (‘===’), .equals method
+,equality,Equality,对象相等,"//Structural Equality (‘==’), Referential equality (‘===’), .equals method
 data class User(val id: Int, val nick: String)
 
 fun testEquals() {
@@ -64,7 +95,7 @@ let b: any = ""10""
 console.log(a == b);  //true
 console.log(a == b);  //true
 console.log(a === b); //false, type different",,,,,,,,,,,,,,,,,,
-,nullable_nonnull_nullish_coalescing,,"val name1: String = ""xx""
+,nullable_nonnull_nullish_coalescing,Nullable/NonNull/Nullish Coalescing,可空/非空/空值合并,"val name1: String = ""xx""
 var name2: String? = null
 
 fun testNullable() {
@@ -83,7 +114,7 @@ name2!.length //you know that
 
 //Nullish Coalescing
 let x1 = name2 ?? ""default value"";",,,,,,,,,,,,,,,,,,
-,string_interpolation,,"val apples = 3
+,string_interpolation,String Interpolation,字符串插入,"val apples = 3
 val oranges = 5
 val fruitSummary1 = ""I have ${apples + oranges} pieces of fruit.""
 val fruitSummary2 = """"""I have ${apples + oranges} pieces of fruit.""""""
@@ -92,7 +123,7 @@ const oranges = 5;
 const fruitSummary1 = `I have ${apples + oranges} pieces of fruit.`;
 const fruitSummary2 = html`I have ${apples + oranges} pieces of fruit.`;
 ",,,,,,,,,,,,,,,,,,
-,range_operator,,"val names = arrayOf(""Anna"", ""Alex"", ""Brian"", ""Jack"")
+,range_operator,Range Operator,范围操作符,"val names = arrayOf(""Anna"", ""Alex"", ""Brian"", ""Jack"")
 val count = names.count()
 for (i in 0..count - 1) {
     println(""Person ${i + 1} is called ${names[i]}"")
@@ -118,7 +149,7 @@ for i in 0..<count {
 // Person 2 is called Alex
 // Person 3 is called Brian
 // Person 4 is called Jack",,,,,,,,,,,,,,,,,
-,inclusive_range_operator,,"for (index in 1..5) {
+,inclusive_range_operator,Inclusive Range Operator,闭区间范围操作符,"for (index in 1..5) {
     println(""$index times 5 is ${index * 5}"")
 }
 // 1 times 5 is 5
@@ -142,7 +173,7 @@ for(let index of _.range(1, 6)) {
 // 3 times 5 is 15
 // 4 times 5 is 20
 // 5 times 5 is 25",,,,,,,,,,,,,,,,,
-COLLECTIONS,arrays_list,,"fun main12() {
+COLLECTIONS,arrays_list,Arrays/List,数组/列表,"fun main12() {
     val shoppingList = arrayOf(
         ""catfish"", ""water"",
         ""tulips"", ""blue paint""
@@ -155,11 +186,11 @@ COLLECTIONS,arrays_list,,"fun main12() {
 shoppingList[1] = ""bottle of water"";","var shoppingList = [""catfish"", ""water"",
     ""tulips"", ""blue paint""]
 shoppingList[1] = ""bottle of water""",,,,,,,,,,,,,,,,,
-,set,,"val set1 = setOf(1 , 2 , 3 , 4 , 3)
+,set,Set,Set,"val set1 = setOf(1 , 2 , 3 , 4 , 3)
 val mutableSet = mutableSetOf(1 , 2 , 3 , 4 , 3);","let mySet = new Set(); //ES2015
 mySet.add(1);
 mySet.delete(1)",,,,,,,,,,,,,,,,,,
-,stream_sequence,,"val wordsSequence = listOf(""one"", ""two"", ""three"", ""four"").asSequence()
+,stream_sequence,Stream/Sequence,流/序列,"val wordsSequence = listOf(""one"", ""two"", ""three"", ""four"").asSequence()
 val list2 = wordsSequence
     .filter { println(""filter: $it""); it.length > 3 }
     .map { println(""length: ${it.length}""); it.length }
@@ -169,7 +200,7 @@ let list2 = words.filter(word => {
 }).map(word => {
     return word.length
 });",,,,,,,,,,,,,,,,,,
-,map,,"val occupations = mutableMapOf(
+,map,Map,Map,"val occupations = mutableMapOf(
     ""Malcolm"" to ""Captain"",
     ""Kaylee"" to ""Mechanic""
 )
@@ -182,7 +213,7 @@ occupations[""Jayne""] = ""Public Relations"";","var occupations = [
     ""Kaylee"": ""Mechanic"",
 ]
 occupations[""Jayne""] = ""Public Relations""",,,,,,,,,,,,,,,,,
-,tuple,,"// data class as Tuple in Kotlin
+,tuple,Tuple,元组,"// data class as Tuple in Kotlin
 data class GasPrices(val a: Double, val b: Double, val c: Double)
 
 fun main7() {
@@ -197,7 +228,7 @@ function main4() {
     let price: GasPrices = [3.59, 3.69, 3.79]
     let [a, b, c] = price;
 }",,,,,,,,,,,,,,,,,,
-,filter_map_reduce,,"fun main13() {
+,filter_map_reduce,Filter/Map/Reduce,过滤/映射/规约,"fun main13() {
     val shoppingList = arrayOf(""catfish"", ""water"", ""tulips"", ""blue paint"")
     shoppingList.filter { it.startsWith(""c"") }
         .map { it.length }
@@ -217,11 +248,11 @@ shoppingList2
     .forEach(item => {
         console.log(item)
     })",,,,,,,,,,,,,,,,,,
-,empty_collections,,"val emptyArray = arrayOf<String>()
+,empty_collections,Empty Collections,空集合,"val emptyArray = arrayOf<String>()
 val emptyMap = mapOf<String, Float>()","const emptyArray: string[];
 const emptyDictionary: {[key: string]: number};","let emptyArray = [String]()
 let emptyDictionary = [String: Float]()",,,,,,,,,,,,,,,,,
-FUNCTIONS,functions,,"fun greet(name: String, day: String): String {
+FUNCTIONS,functions,Functions,函数,"fun greet(name: String, day: String): String {
     return ""Hello $name, today is $day.""
 }
 greet(""Bob"", ""Tuesday"")","function greet(name: string, day: string): string {
@@ -231,7 +262,7 @@ greet(""Bob"", ""Tuesday"");","func greet(_ name: String,_ day: String) -> Strin
     return ""Hello \(name), today is \(day).""
 }
 greet(""Bob"", ""Tuesday"")",,,,,,,,,,,,,,,,,
-,variable_number_of_arguments,,"fun sumOf(vararg numbers: Int): Int {
+,variable_number_of_arguments,Variable Number Of Arguments,可变数量参数,"fun sumOf(vararg numbers: Int): Int {
     var sum = 0
     for (number in numbers) {
         sum += number
@@ -258,7 +289,7 @@ sumOf(42, 597, 12);","func sumOf(_ numbers: Int...) -> Int {
     return sum
 }
 sumOf(42, 597, 12)",,,,,,,,,,,,,,,,,
-,function_type,,"fun makeIncrementer(): (Int) -> Int {
+,function_type,Function Type,函数返回类型,"fun makeIncrementer(): (Int) -> Int {
     val addOne = fun(number: Int): Int {
         return 1 + number
     }
@@ -286,7 +317,7 @@ let makeIncrementer = () => (number: number) => 1 + number;","func makeIncrement
 }
 let increment = makeIncrementer()
 increment(7)",,,,,,,,,,,,,,,,,
-,functional_interface,,"fun interface IntPredicate {
+,functional_interface,Functional Interface,函数式接口,"fun interface IntPredicate {
     fun accept(i: Int): Boolean
 }
 
@@ -304,14 +335,14 @@ mySearch = function (source: string, subString: string) {
   let result = source.search(subString);
   return result > -1;
 };",,,,,,,,,,,,,,,,,,
-,lambda_arrow_function,,"//lambda
+,lambda_arrow_function,Lambda/Arrow Function,Lambda(箭头)函数,"//lambda
 val printText = { text: String ->
     println(text)
 }","//arrow function
 let printText = (text: string) => {
     console.log(text)
 }",,,,,,,,,,,,,,,,,,
-,named_arguments,,"fun area(width: Int, height: Int) = width * height
+,named_arguments,Named Arguments,命名参数,"fun area(width: Int, height: Int) = width * height
 area(width = 2, height = 3)
 
 // This is also possible with named arguments
@@ -320,7 +351,7 @@ area(height = 3, width = 2)","function area({width, height}:{width:number, heigh
     return width * height;
 }
 area({width: 2, height: 3});",,,,,,,,,,,,,,,,,,
-,functions_generics,,"fun  identity(value: T): T {
+,functions_generics,Function Generics,泛型函数,"fun  identity(value: T): T {
     return value
 }
 
@@ -329,7 +360,7 @@ val str = identity(""Hello"")","function identity(value: T): T {
 }
 
 let str: string = identity(""Hello"");",,,,,,,,,,,,,,,,,,
-,generator_function,,"val sequence2 = sequence {
+,generator_function,Generator Function,生成器函数,"val sequence2 = sequence {
     val start = 0
     // yielding a single value
     yield(start)
@@ -351,7 +382,7 @@ println(sequence2.take(7).toList()) // [0, 1, 3, 5, 8, 24, 72]","function* count
 for (let num of counter(3)) {
     console.log(num);
 }",,,,,,,,,,,,,,,,,,
-,async_generator_function,,"import kotlinx.coroutines.delay
+,async_generator_function,Async Generator Function,异步生成器函数,"import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
@@ -382,7 +413,7 @@ async function f() {
     console.log(x);
   }
 }",,,,,,,,,,,,,,,,,,
-,optional_default_value_params,,"//Optional Parameters by default value
+,optional_default_value_params,Optional/Default Value Params,可选/默认值参数,"//Optional Parameters by default value
 fun sayHello(name: String = """") {
 
 }
@@ -405,7 +436,7 @@ sayHello(""Jackie"")
 
 buildName(""Jack"")
 buildName(""Jack"", ""Ma"")",,,,,,,,,,,,,,,,,,
-,method_extension,,"import kotlin.js.RegExp
+,method_extension,Method Extension,拓展方法,"import kotlin.js.RegExp
 
 fun String.isEmailValid(): Boolean {
     val pattern = RegExp(""^[\\w.-]+@([\\w\\-]+\\.)+[A-Z]{2,8}$"", ""i"")
@@ -418,3 +449,500 @@ String.prototype.isEmailValid = function (this: string): boolean {
     let re = new RegExp(""^[\\w.-]+@([\\w\\-]+\\.)+[A-Z]{2,8}$"", 'i');
     return re.test(this);
 };",,,,,,,,,,,,,,,,,,
+CLASSES,class_declaration,Class Declaration,类的定义,"class Shape {
+    private var numberOfSides = 0
+
+    constructor(numberOfSides: Int) {
+        this.numberOfSides = numberOfSides
+    }
+
+    fun simpleDescription() =
+        ""A shape with $numberOfSides sides.""
+}
+
+val shape2 = Shape(4)","class Shape {
+    numberOfSides = 0;
+
+    constructor(numberOfSides: number) {
+        this.numberOfSides = numberOfSides;
+    }
+
+    simpleDescription(){
+        return `A shape with ${this.numberOfSides} sides.`;
+    }
+}
+
+let shape2 = new Shape(4)",,,,,,,,,,,,,,,,,,
+,class_usage,Class Usage,类的使用,"var shape = Shape()
+shape.numberOfSides = 7
+var shapeDescription = shape.simpleDescription()","let shape = new Shape();
+shape.numberOfSides = 7;
+let shapeDescription = shape.simpleDescription();",,,,,,,,,,,,,,,,,,
+,subclass,Subclass,子类,"open class NamedShape(val name: String) {
+    var numberOfSides = 0
+
+    open fun simpleDescription() =
+        ""A shape with $numberOfSides sides.""
+}
+
+class Square(var sideLength: BigDecimal, name: String) :
+        NamedShape(name) {
+    init {
+        numberOfSides = 4
+    }
+
+    fun area() = sideLength.pow(2)
+
+    override fun simpleDescription() =
+        ""A square with sides of length $sideLength.""
+}
+
+val test = Square(BigDecimal(""5.2""), ""square"")
+test.area()
+test.simpleDescription()","class NamedShape {
+    numberOfSides: number = 0;
+    name: string;
+
+    constructor(name: string) {
+        this.name = name
+    }
+
+    simpleDescription():string {
+        return `A shape with ${this.numberOfSides} sides.`;
+    }
+}
+
+class Square extends NamedShape {
+    sideLength: number;
+
+    constructor(sideLength: number, name: string) {
+        super(name);
+        this.sideLength = sideLength;
+        this.numberOfSides = 4;
+    }
+
+    area(): number {
+        return this.sideLength * this.sideLength;
+    }
+
+    simpleDescription(): string {
+        return ""A square with sides of length "" +
+	       this.sideLength + ""."";
+    }
+}
+
+let test = new Square(5.2, ""square"");
+test.area();
+test.simpleDescription();",,,,,,,,,,,,,,,,,,
+,checking_type,Checking Type,类型判断,"var movieCount = 0
+var songCount = 0
+
+class Movie
+class Song
+
+fun main10() {
+    val library: List = listOf(""first"")
+    for (item in library) {
+        if (item is Movie) {
+            ++movieCount
+        } else if (item is Song) {
+            ++songCount
+        }
+    }
+}","let movieCount = 0;
+let songCount = 0;
+
+class Movie {
+}
+
+class Song {
+}
+
+let library: unknown[] = [new Movie(), new Song()]
+
+for (const item of library) {
+    if (item instanceof Movie) {
+        ++movieCount;
+    } else if (item instanceof Song) {
+        ++songCount;
+    }
+}",,,,,,,,,,,,,,,,,,
+,downcasting,DownCasting,向下转换,"for (current in someObjects) {
+    if (current is Movie) {
+        println(""Movie: '${current.name}', "" +
+	    ""dir. ${current.director}"")
+    }
+}","for (let current in someObjects) {
+    if (current instanceof Movie) {
+        console.log(`Movie: '${movie.name}', ` +
+            `dir. ${movie.director}`);
+    }
+}",,,,,,,,,,,,,,,,,,
+,protocal_interface,Protocol/Interface,协议/接口,"interface Nameable {
+    fun name(): String
+}
+
+fun f<T: Nameable>(x: T) {
+    println(""Name is "" + x.name())
+}","interface Nameable {
+    name(): string;
+}
+
+function f(x: Nameable) {
+    console.log(""Name is "" + x.name());
+}",,,,,,,,,,,,,,,,,,
+,mixins,Mixins,多态,"//mixin in Kotlin just Kotlin interface
+interface MyInterface {
+    val prop: Int // abstract
+
+    fun foo() {
+        print(prop)
+    }
+}
+
+class Child : MyInterface {
+    override val prop: Int = 29
+}","// Disposable Mixin
+class Disposable {
+    isDisposed: boolean = false;
+
+    dispose() {
+        this.isDisposed = true;
+    }
+}
+
+class SmartObject {
+}
+
+interface SmartObject extends Disposable {
+}
+
+applyMixins(SmartObject, [Disposable]);
+
+let smartObj = new SmartObject();
+smartObj.dispose();
+
+function applyMixins(derivedCtor: any, baseCtors: any[]) {
+    baseCtors.forEach(baseCtor => {
+        Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
+            // @ts-ignore
+            Object.defineProperty(derivedCtor.prototype, name, Object.getOwnPropertyDescriptor(baseCtor.prototype, name));
+        });
+    });
+}
+",,,,,,,,,,,,,,,,,,
+,enums,Enums,枚举,"enum class Direction {
+    NORTH, SOUTH, WEST, EAST
+}
+
+enum class Color(val rgb: Int) {
+        RED(0xFF0000),
+        GREEN(0x00FF00),
+        BLUE(0x0000FF)
+}","enum Direction {
+    NORTH, SOUTH, WEST, EAST
+}
+
+enum Arrow {
+    Up = ""UP"",
+    Down = ""DOWN"",
+    Left = ""LEFT"",
+    Right = ""RIGHT"",
+}",,,,,,,,,,,,,,,,,,
+,annotations_decorators,Annotations/Decorators,注解/修饰符,"@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION,
+        AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.EXPRESSION)
+@Retention(AnnotationRetention.SOURCE)
+@MustBeDocumented
+annotation class Fancy
+
+@Fancy class Foo {
+    @Fancy fun baz(@Fancy foo: Int): Int {
+        return (@Fancy 1)
+    }
+}","function enumerable(value: boolean) {
+    return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+        descriptor.enumerable = value;
+    };
+}
+
+class Greeter {
+    greeting: string;
+
+    constructor(message: string) {
+        this.greeting = message;
+    }
+
+    @enumerable(false)
+    greet() {
+        return ""Hello, "" + this.greeting;
+    }
+}",,,,,,,,,,,,,,,,,,
+,object_expressions,Object expressions,对象表达式,"val helloWorld = object {
+    val hello = ""Hello""
+    val world = ""World""
+    // object expressions extend Any, so `override` is required on `toString()`
+    override fun toString() = ""$hello $world""
+}","const helloWorld = {
+  name: (): string => {
+    return """";
+  }
+}
+",,,,,,,,,,,,,,,,,,
+,object_as_function,Object as Function/invoke operator/Hybrid Types,对象函数,"class Config {
+    operator fun invoke(): String {
+        return ""invoke""
+    }
+}
+
+fun main5() {
+    val config = Config()
+    println(config())
+}","interface Counter {
+    (start: number): string;
+
+    interval: number;
+
+    reset(): void;
+}
+
+function getCounter(): Counter {
+    let counter = (function (start: number) {
+        console.log(""start"")
+    }) as Counter;
+    counter.interval = 123;
+    counter.reset = function () {
+    };
+    return counter;
+}
+
+let c = getCounter();
+c(10);
+c.reset();
+c.interval = 5.0;",,,,,,,,,,,,,,,,,,
+,indexed_operator,Indexed operator/Indexable Types,索引操作符/可索引类型,"//Indexed access operator
+class StringArray {
+    operator fun get(index: Int): String {
+        return """"
+    }
+
+    operator fun set(index: Int, value: String) {
+
+    }
+
+    operator fun get(index: String): String {
+        return """"
+    }
+
+    operator fun set(index: String, value: String) {
+
+    }
+}
+
+fun main8() {
+    val stringArray = StringArray()
+    stringArray[0]
+    stringArray[""first""] = ""second""
+}","//Indexed access operator
+class StringArray {
+    operator fun get(index: Int): String {
+        return """"
+    }
+
+    operator fun set(index: Int, value: String) {
+
+    }
+
+    operator fun get(index: String): String {
+        return """"
+    }
+
+    operator fun set(index: String, value: String) {
+
+    }
+}
+
+fun main8() {
+    val stringArray = StringArray()
+    stringArray[0]
+    stringArray[""first""] = ""second""
+}",,,,,,,,,,,,,,,,,,
+,data_class,Data Class,数据类,"data class Point(val x: Double, val y: Double)
+
+val point = Point(1.0, 2.0);","type Point = {
+    x: number,
+    y: number
+}
+
+let point: Point = {x: 1.0, y: 2.0};",,,,,,,,,,,,,,,,,,
+,readonly_property,Readonly Property,只读属性,"//use val for readonly
+data class Foo2(val bar: Double, val bas: Double)
+
+fun main11() {
+    val foo2 = Foo2(1.0, 2.0)
+    foo2.bar = 2.0 //illegal
+}","type Foo2 = {
+    readonly bar: number;
+    readonly bas: number;
+};
+const foo: Foo2 = {bar: 123, bas: 456};
+foo.bar = 456; // illegal",,,,,,,,,,,,,,,,,,
+,generics,Generics,泛型,"class Box(val value: T) {
+
+}
+
+val box = Box(1.0)","class Box {
+    value: T;
+
+    constructor(value: T) {
+        this.value = value;
+    }
+}
+
+let x: Box = new Box(1.0);",,,,,,,,,,,,,,,,,,
+,dynamic_keys,Dynamic keys,动态键,"class MyClass {
+    private val store = mutableMapOf()
+    operator fun get(key: String): Any? {
+        return store[key]
+    }
+
+    operator fun set(key: String, value: Any) {
+        store[key] = value
+    }
+}","interface DictionarySupport {
+    [index: string]: any;
+}",,,,,,,,,,,,,,,,,,
+Async,coroutines_promise,Coroutines/Promise,协程/承诺,"suspend fun findNickById(id: Int): String {
+    return ""nick $id""
+}
+
+suspend fun main() {
+    val nick = findNickById(1)
+}","//Promise
+const promise1 = new Promise((resolve, reject) => {
+    resolve(""good"")
+    //reject(new Error('failed'));
+});
+
+promise1.then(value => {
+    console.log('Hi', value);
+}).catch(error => {
+    console.log('Oops', error);
+});
+
+(async () => {
+    let value = await promise1
+    console.log(value)
+})();",,,,,,,,,,,,,,,,,,
+,flow_observable,Flow/Observable,"Flow/Observable
+","import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.onEach
+
+fun findVip(): Flow {
+    return arrayOf(""first"", ""second"").asFlow()
+}
+
+fun main2() {
+    findVip().onEach {
+        print(it)
+    }
+}","import { from } from 'rxjs';
+const result = from( [10, 20, 30]);
+
+result.subscribe(x => console.log(x));",,,,,,,,,,,,,,,,,,
+Module/Namespace,namespace,Namespace,命名空间,"package validation
+
+import kotlin.js.RegExp
+
+val zipCodeRegex = RegExp(""[0-9]+"")
+
+interface StringValidator {
+    fun isAcceptable(s: String): Boolean;
+}
+
+class ZipCodeValidator : StringValidator {
+    override fun isAcceptable(s: String): Boolean {
+        return s.length == 5 && zipCodeRegex.test(s);
+    }
+}","namespace Validation {
+    const numberRegexp = /^[0-9]+$/;
+
+    export interface StringValidator {
+        isAcceptable(s: string): boolean;
+    }
+
+    export class ZipCodeValidator implements StringValidator {
+        isAcceptable(s: string): boolean {
+            return s.length === 5 && numberRegexp.test(s);
+        }
+    }
+}
+
+let validators: { [s: string]: Validation.StringValidator; } = {};
+validators[""ZipCode""] = new Validation.ZipCodeValidator();",,,,,,,,,,,,,,,,,,
+,external_declare,External Declare,外部声明,"@file:JsModule(""lodash"")
+package lodash
+
+@JsName(""toUpper"")
+external fun toUpper(text: String): String","//index.d.ts
+export = _;
+export as namespace _;
+
+declare const _: _.LoDashStatic;
+declare namespace _ {
+    interface LoDashStatic {
+    }
+}",,,,,,,,,,,,,,,,,,
+,module_export,Module Export,模块导出,"@JsExport
+@JsName(""hello"")
+fun hello(name: String): String {
+    return ""Hello name""
+}","export function hello(name: string): string {
+    return `Hello ${name}!`
+}",,,,,,,,,,,,,,,,,,
+"Tools/Library
+",unit_test,Unit Test,单元测试,"// testImplementation(kotlin(""test-js"")) in build.gradle.ts
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
+class DemoTest {
+    @Test
+    fun testBar() {
+        console.log(""Hello World!"")
+        assertEquals(4, 2 * 2)
+    }
+}","// jest, ts-jest
+test(""hello test"", () => {
+    console.log(""hello test"");
+});",,,,,,,,,,,,,,,,,,
+Special,special_usages,Special Usages,特殊用法,"//When expression
+when (x) {
+    in 1..10 -> print(""x is in the range"")
+    in validNumbers -> print(""x is valid"")
+    !in 10..20 -> print(""x is outside the range"")
+    else -> print(""none of the above"")
+}
+
+// DSL
+html {
+  head {
+     title {+""XML encoding with Kotlin""}
+  }
+}
+
+//Operator overloading: https://kotlinlang.org/docs/operator-overloading.html#unary-operations
+
+//Delegated properties
+class Example {
+    var p: String by Delegate()
+}","// tagged literal
+const code = html`xxx`
+
+//String Literal Types
+type EventType = ""click"" | ""mouseover"";
+
+// union
+type TextOrNumber = string | number;
+
+// tuple
+let x2: [string, number] = [""hello"", 10];",,,,,,,,,,,,,,,,,,
